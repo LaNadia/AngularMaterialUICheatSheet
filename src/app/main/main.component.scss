@@ -1,11 +1,17 @@
+
+
 mat-sidenav-container{
-    height: calc(205vh - 115vh)
+    height: calc(205vh - 113vh)
 }
 
 mat-sidenav{
     width: 200px;
     background-color: #eee;
 }
+
+// mat-sidenav-content *{
+//     pointer-events: none;
+// }
 
 a {
     text-decoration: none;

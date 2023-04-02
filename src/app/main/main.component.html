@@ -1,7 +1,7 @@
 
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-button (click)="toggleSidenav()"><mat-icon>menu</mat-icon>Menu</button>
+        <button mat-button (click)="toggleSidenav($event)"><mat-icon>menu</mat-icon>Menu</button>
         <!-- <button mat-button><mat-icon>home</mat-icon>Home</button> -->
         <h4>Angular Material UI Cheatsheet</h4>
     </mat-toolbar-row>
@@ -27,9 +27,11 @@
         </mat-list>    
     </mat-sidenav>
   
-    <mat-sidenav-content>
+    <mat-sidenav-content >
       <div *ngIf="!element">Show this while nothing is chosen</div>
-      <ng-container *ngComponentOutlet="(element)"></ng-container>
+      <ng-container *ngComponentOutlet="(element)" ></ng-container>
+
     </mat-sidenav-content>
   
 </mat-sidenav-container>
+

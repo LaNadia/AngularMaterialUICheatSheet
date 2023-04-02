@@ -6,14 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExportModule } from './material-export/material-export.module';
 import { MainComponent } from './main/main.component';
-import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { MainModule } from './main/main.module';
-import { ChipsComponent } from './pages/chips/chips.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,

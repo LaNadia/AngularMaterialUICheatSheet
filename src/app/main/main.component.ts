@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
 import { ButtonsComponent } from '../pages/buttons/buttons.component';
 import { ChipsComponent } from '../pages/chips/chips.component';
 
@@ -10,24 +10,28 @@ import { ChipsComponent } from '../pages/chips/chips.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+
   element: any | null;
   @ViewChild('sidenav', {static: true}) sidenav!: MatSidenav;
 
-toggleSidenav(){
-  this.sidenav.toggle();
-  this.element = null;
-}
+  toggleSidenav(event: MouseEvent){
+
+    this.sidenav.toggle();
+    console.log(event.currentTarget)
+
+  };
+
   showElement(element: string){
-    switch(element) {
-      case 'buttons': 
-        this.element = ButtonsComponent;
-        break;
-      case 'chips':
-        this.element = ChipsComponent;
-        break;
-      
-      default:
-        this.element = null;
+      switch(element) {
+        case 'buttons': 
+          this.element = ButtonsComponent;
+          break;
+        case 'chips':
+          this.element = ChipsComponent;
+          break;
+        
+        default:
+          this.element = null;
+      }
     }
-  }
 }
