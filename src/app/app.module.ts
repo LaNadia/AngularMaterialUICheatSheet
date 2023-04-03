@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExportModule } from './material-export/material-export.module';
 import { MainComponent } from './main/main.component';
 import { MainModule } from './main/main.module';
+import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MainModule } from './main/main.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialExportModule,
+    CodemirrorModule,
     MainModule,
   ],
   providers: [],

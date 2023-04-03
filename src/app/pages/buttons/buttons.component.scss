@@ -4,8 +4,9 @@ mat-grid-tile{
 }
 
 mat-card {
-     height: stretch;
-     width: stretch;
+    height: stretch;
+    width: stretch;
+    padding-bottom: 5rem;
 }
 
 mat-card-header{
@@ -21,14 +22,11 @@ mat-card-content {
     justify-content: center;
     align-items: center;
     padding-bottom: 1rem;
+    min-height: 15rem;
 }
 
-
-.code {
-    display: flex;
-    flex-direction: column;
-    gap: .94rem;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem
+.choose {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3rem;
 }

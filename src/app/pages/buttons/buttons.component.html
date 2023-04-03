@@ -1,5 +1,5 @@
 
-<mat-grid-list cols="5" rowHeight="54rem" role="list" >
+<mat-grid-list cols="5" rowHeight="57rem" role="list" >
 
     <mat-grid-tile colspan="1" ></mat-grid-tile>
 
@@ -29,8 +29,8 @@
                 <button color='primary' mat-raised-button>raised-button</button>
             </mat-card-content>
 
-            <mat-divider></mat-divider>
-            <mat-card-header>
+            <mat-divider style="margin-top: .2rem"></mat-divider>
+            <mat-card-header >
                 <mat-card-title>Other buttons</mat-card-title>
             </mat-card-header>
             <mat-divider></mat-divider>
@@ -50,11 +50,16 @@
             </mat-card-header>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <code class="code">
-                    <div style="height: 2.1rem;" *ngFor="let button of buttons">
-                        {{button}}
-                    </div>
-                </code>
+              
+                    <ngx-codemirror
+                        [(ngModel)]="buttons"
+                        [options]="{
+                        lineNumbers: true,
+                        theme: 'material',
+                        mode: 'markdown'
+                        }"
+                    ></ngx-codemirror>
+    
             </mat-card-content>
 
             <mat-divider></mat-divider>
@@ -63,11 +68,16 @@
             </mat-card-header>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <code  class="code">
-                    <div  style="height: 2.04rem" *ngFor="let button of buttonsWithColors">
-                        {{button}}
-                    </div>
-                </code>
+
+                    <ngx-codemirror
+                        [(ngModel)]="buttonsWithColors"
+                        [options]="{
+                        lineNumbers: true,
+                        theme: 'material',
+                        mode: 'markdown'
+                        }"
+                    ></ngx-codemirror>
+
             </mat-card-content>
 
             <mat-divider></mat-divider>
@@ -75,14 +85,22 @@
                 <mat-card-title>Other buttons</mat-card-title>
             </mat-card-header>
             <mat-divider></mat-divider>
-            <mat-card-content style="padding-bottom: 5rem;">
-                <code class="code">
-                    <div  style="height: 2.1rem" *ngFor="let button of otherButtons">
-                        {{button}}
-                    </div>
-                </code>
+            <mat-card-content>
+     
+                    <ngx-codemirror
+                        [(ngModel)]="otherButtons"
+                        [options]="{
+                        lineNumbers: true,
+                        theme: 'material',
+                        mode: 'markdown'
+                        }"
+                    ></ngx-codemirror>
+   
                 <mat-divider></mat-divider>
-                <p style="text-align: center;width: 30rem;">Choose your icon: <a href="https://fonts.google.com/icons" target="_blank">here</a> (https://fonts.google.com/icons); pick one and find "Inserting the icon" block</p>
+                <p class="choose">Choose your icon:
+                    <a href="https://fonts.google.com/icons" target="_blank">here</a>
+                    (https://fonts.google.com/icons); pick one and find "Inserting the icon" block
+                </p>
             </mat-card-content>
     
         </mat-card>

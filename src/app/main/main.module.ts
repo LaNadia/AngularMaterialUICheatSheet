@@ -5,6 +5,9 @@ import { ButtonsComponent } from '../pages/buttons/buttons.component';
 import { MainComponent } from './main.component';
 import { MaterialExportModule } from '../material-export/material-export.module';
 import { ChipsComponent } from '../pages/chips/chips.component';
+import { HighlightJsModule } from 'ngx-highlight-js';
+import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -21,7 +24,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MaterialExportModule
+    FormsModule,
+    MaterialExportModule,
+    CodemirrorModule,
   ],
   exports: [
     ButtonsComponent,
