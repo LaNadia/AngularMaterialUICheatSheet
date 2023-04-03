@@ -11,7 +11,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   
 })
 export class ButtonsComponent {
-  // constructor(private sanitizer: DomSanitizer) {}
+  
+
   buttons: string =
 `<button mat-button>mat-button</button>
 <button mat-raised-button>raised-button</button>

@@ -1,5 +1,5 @@
 
-<mat-grid-list cols="5" rowHeight="57rem" role="list" >
+<mat-grid-list cols="5" rowHeight="59rem" role="list" >
 
     <mat-grid-tile colspan="1" ></mat-grid-tile>
 
@@ -50,16 +50,25 @@
             </mat-card-header>
             <mat-divider></mat-divider>
             <mat-card-content>
-              
-                    <ngx-codemirror
-                        [(ngModel)]="buttons"
-                        [options]="{
-                        lineNumbers: true,
-                        theme: 'material',
-                        mode: 'markdown'
-                        }"
-                    ></ngx-codemirror>
-    
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="buttons"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
             </mat-card-content>
 
             <mat-divider></mat-divider>
@@ -69,14 +78,23 @@
             <mat-divider></mat-divider>
             <mat-card-content>
 
-                    <ngx-codemirror
-                        [(ngModel)]="buttonsWithColors"
-                        [options]="{
-                        lineNumbers: true,
-                        theme: 'material',
-                        mode: 'markdown'
-                        }"
-                    ></ngx-codemirror>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="buttonsWithColors"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
 
             </mat-card-content>
 
@@ -87,14 +105,23 @@
             <mat-divider></mat-divider>
             <mat-card-content>
      
-                    <ngx-codemirror
-                        [(ngModel)]="otherButtons"
-                        [options]="{
-                        lineNumbers: true,
-                        theme: 'material',
-                        mode: 'markdown'
-                        }"
-                    ></ngx-codemirror>
+                <mat-accordion style="padding-top: 2rem">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="otherButtons"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
    
                 <mat-divider></mat-divider>
                 <p class="choose">Choose your icon:

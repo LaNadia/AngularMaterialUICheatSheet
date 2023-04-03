@@ -1,4 +1,4 @@
-<mat-grid-list cols="9" rowHeight="500rem" role="list" >
+<mat-grid-list cols="9" rowHeight="80rem" role="list" >
 
     <mat-grid-tile colspan="1"></mat-grid-tile>
 
@@ -27,7 +27,7 @@
 
             <mat-card-header>Chips Drag and Drop</mat-card-header>
             <mat-divider></mat-divider>
-            <mat-card-content style="height:28rem">
+            <mat-card-content >
                 <mat-chip-set
                     class="example-chip"
                     cdkDropList 
@@ -67,6 +67,26 @@
                 </mat-form-field>
             </mat-card-content>
 
+            <mat-card-header>Chips with avatar</mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-chip-listbox aria-label="Dog selection">
+                    <mat-chip>
+                      <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                      Dog one
+                    </mat-chip>
+                    <mat-chip color="primary">
+                      <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                      Dog two
+                    </mat-chip>
+                    <mat-chip color="accent">
+                      <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                      Dog three
+                    </mat-chip>
+                  </mat-chip-listbox>
+            </mat-card-content>
+
+
         </mat-card>
     </mat-grid-tile>
 
@@ -74,58 +94,114 @@
         <mat-card>
             <mat-card-header>Chips basics (horizontal)</mat-card-header>
             <mat-divider></mat-divider>
-            <mat-card-content>
-                <ngx-codemirror
+            <mat-card-content style="padding-top: 4rem">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
                             [(ngModel)]="chipsBasic"
                             [options]="{
                             lineNumbers: true,
                             theme: 'material',
                             mode: 'markdown'
                             }"
-                ></ngx-codemirror>
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </mat-card-content>
             
             <mat-card-header>Stacked chips (vertical)</mat-card-header>
             <mat-divider></mat-divider>
-            <mat-card-content>
-                <ngx-codemirror
+            <mat-card-content style="padding: 4rem 1rem 5rem 1rem">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
                             [(ngModel)]="stackedColorsTemplate"
                             [options]="{
                             lineNumbers: true,
                             theme: 'material',
                             mode: 'markdown'
                             }"
-                ></ngx-codemirror>
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </mat-card-content>
   
         <mat-card-header>Chips Drag and Drop</mat-card-header>
         <mat-divider></mat-divider>
-        <mat-card-content>
-            <ngx-codemirror
-                            [(ngModel)]="dragDropTemplate"
-                            [options]="{
-                            lineNumbers: true,
-                            theme: 'material',
-                            mode: 'markdown'
-                            }"
-                ></ngx-codemirror>
+        <mat-card-content style="padding: 2rem 1rem 2rem 1rem">
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                        <ngx-codemirror
+                        [(ngModel)]="dragDropTemplate"
+                        [options]="{
+                        lineNumbers: true,
+                        theme: 'material',
+                        mode: 'markdown'
+                        }"
+                    ></ngx-codemirror>
+                </mat-expansion-panel>
+            </mat-accordion>
             </mat-card-content>
         
 
         <mat-card-header>Chips with input</mat-card-header>
         <mat-divider></mat-divider>
-        <mat-card-content>
-            <ngx-codemirror
-                            [(ngModel)]="chipsWithInput"
+        <mat-card-content style="padding: 2rem 1rem 4rem 1rem">
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                        <ngx-codemirror
+                        [(ngModel)]="chipsWithInput"
+                        [options]="{
+                        lineNumbers: true,
+                        theme: 'material',
+                        mode: 'markdown'
+                        }"
+                    ></ngx-codemirror>
+                </mat-expansion-panel>
+            </mat-accordion>
+            </mat-card-content>
+
+            <mat-card-header>Chips with avatar</mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="chipsWithAvatar"
                             [options]="{
                             lineNumbers: true,
                             theme: 'material',
                             mode: 'markdown'
                             }"
-                ></ngx-codemirror>
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </mat-card-content>
-
-
 
 
 
