@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { MainModule } from './main/main.module';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { ChipsModule } from "./pages/chips/chips.module";
+import { ButtonsModule } from './pages/buttons/buttons.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ChipsModule } from "./pages/chips/chips.module";
         MaterialExportModule,
         CodemirrorModule,
         MainModule,
-        ChipsModule
+        ChipsModule,
+        ButtonsModule
     ]
 })
 export class AppModule { }

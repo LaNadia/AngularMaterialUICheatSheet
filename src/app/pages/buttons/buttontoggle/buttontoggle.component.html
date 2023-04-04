@@ -1,0 +1,316 @@
+<mat-grid-list cols="5" rowHeight="150rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="1" >
+
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Button toggle group</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <h4>Single selection</h4>
+                <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+                <mat-button-toggle value="red">Red</mat-button-toggle>
+                <mat-button-toggle value="green">Green</mat-button-toggle>
+                <mat-button-toggle value="blue">Blue</mat-button-toggle>
+                </mat-button-toggle-group>
+
+                <h4>Multiple selection</h4>
+                <mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple>
+                <mat-button-toggle value="flour">Flour</mat-button-toggle>
+                <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+                <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+                </mat-button-toggle-group>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+            <mat-card-header>
+                <mat-card-title>Button-toggles with forms</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <section>
+                    <h4>Button Toggle inside of a Template-driven form</h4>
+                    <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+                      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                    </mat-button-toggle-group>
+                    <p>Chosen value is {{fontStyle}}</p>
+                </section>         
+                <section>
+                    <h4>Button Toggle inside of a Reactive form</h4>
+                    <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+                      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                    </mat-button-toggle-group>
+                    <p>Chosen value is {{fontStyleControl.value}}</p>
+                </section>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+            <mat-card-header>
+                <mat-card-title>Button-toggles no forms</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-button-toggle-group #group="matButtonToggleGroup">
+                    <mat-button-toggle value="left" aria-label="Text align left">
+                      <mat-icon>format_align_left</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="center" aria-label="Text align center">
+                      <mat-icon>format_align_center</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="right" aria-label="Text align right">
+                      <mat-icon>format_align_right</mat-icon>
+                    </mat-button-toggle>
+                    <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+                      <mat-icon>format_align_justify</mat-icon>
+                    </mat-button-toggle>
+                  </mat-button-toggle-group>
+                  <div class="example-selected-value">Selected value: {{group.value}}</div>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+            <mat-card-header>
+                <mat-card-title>Button toggle appearance</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <div>
+                    Default appearance:
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                    </mat-button-toggle-group>
+                  </div>
+                  <div>
+                    Legacy appearance:
+                    <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+                      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                    </mat-button-toggle-group>
+                  </div>
+            </mat-card-content>
+
+
+
+
+
+
+
+        </mat-card>
+
+
+    </mat-grid-tile>
+
+
+    <mat-grid-tile role="listitem" colspan="2">
+        <mat-card>
+
+            <mat-card-header>
+                <mat-card-title>Button toggle group</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code + explanation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      
+                                <mat-tab label="Single selection">
+                                  <ng-template matTabContent>
+                                  <ngx-codemirror
+                                    [(ngModel)]="singleToggle"
+                                    [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"
+                                ></ngx-codemirror>
+                                </ng-template>
+                                </mat-tab>
+                                <mat-tab label="Multiple selection">
+                                  <ng-template matTabContent>
+                                  <ngx-codemirror
+                                        [(ngModel)]="mutlipleToggle"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                </ng-template>
+                                </mat-tab>
+                                <mat-tab label="Explanations template">
+                                    <ng-template matTabContent>
+                                    please write 
+                                  </ng-template>
+                                </mat-tab>
+                              </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Button-toggles with forms</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code + explanation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                <mat-tab label="Template-driven form">
+                                  <ng-template matTabContent>
+                                    <ngx-codemirror
+                                        [(ngModel)]="buttonToggleTemplatedrivenform"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                  </ng-template>
+                                </mat-tab>
+                                <mat-tab label="Reactive form HTML">
+                                  <ng-template matTabContent>
+                                    <ngx-codemirror
+                                        [(ngModel)]="buttonToggleReactiveform"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                 </ng-template>
+                                </mat-tab>
+                                <mat-tab label="Reactive form TS">
+                                    <ng-template matTabContent>
+                                      <ngx-codemirror
+                                          [(ngModel)]="buttonToggleReactiveformTS"
+                                          [options]="{
+                                          lineNumbers: true,
+                                          theme: 'material',
+                                          mode: 'markdown'
+                                          }"
+                                      ></ngx-codemirror>
+                                   </ng-template>
+                                  </mat-tab>
+                                <mat-tab label="Explanations template">
+                                    <ng-template matTabContent>
+                                    please write 
+                                   </ng-template>
+                                </mat-tab>
+                            </mat-tab-group>
+                      </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+            
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Button-toggles no forms</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code + explanation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                <mat-tab label="No form">
+                                  <ng-template matTabContent>
+                                    <ngx-codemirror
+                                        [(ngModel)]="ButtonTogglesNoForms"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                  </ng-template>
+                                </mat-tab>
+                                <mat-tab label="Explanations template">
+                                    <ng-template matTabContent>
+                                    please write 
+                                   </ng-template>
+                                </mat-tab>
+                            </mat-tab-group>
+                      </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+
+            <mat-card-header>
+                <mat-card-title>Button toggle appearance</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code + explanation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                <mat-tab label="Appearance">
+                                  <ng-template matTabContent>
+                                    <ngx-codemirror
+                                        [(ngModel)]="ButtonToggleAppearance"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                  </ng-template>
+                                </mat-tab>
+                                <mat-tab label="Explanations template">
+                                    <ng-template matTabContent>
+                                    please write 
+                                   </ng-template>
+                                </mat-tab>
+                            </mat-tab-group>
+                      </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+
+
+
+
+
+
+
+            <mat-divider></mat-divider>
+        </mat-card>
+
+  
+
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+</mat-grid-list>

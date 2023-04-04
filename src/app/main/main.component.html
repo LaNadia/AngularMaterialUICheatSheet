@@ -28,9 +28,10 @@
     </mat-sidenav>
   
     <mat-sidenav-content >
-      <div *ngIf="!element">Show this while nothing is chosen</div>
+      <!-- <div *ngIf="!element">Show this while nothing is chosen</div>
       <ng-container *ngComponentOutlet="(element)" ></ng-container>
-    
+     -->
+     <app-buttontoggle></app-buttontoggle>
     </mat-sidenav-content>
   
 </mat-sidenav-container>

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ButtonsComponent } from '../pages/buttons/buttons.component';
 import { MainComponent } from './main.component';
 import { MaterialExportModule } from '../material-export/material-export.module';
 
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChipsModule } from '../pages/chips/chips.module';
+import { ButtonsModule } from '../pages/buttons/buttons.module';
 
 
 const routes: Routes = [
@@ -17,9 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    ButtonsComponent,
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -27,10 +25,9 @@ const routes: Routes = [
     ReactiveFormsModule,
     MaterialExportModule,
     CodemirrorModule,
-    ChipsModule
+    ChipsModule,
+    ButtonsModule
   ],
-  exports: [
-    ButtonsComponent,
-  ]
+
 })
 export class MainModule { }

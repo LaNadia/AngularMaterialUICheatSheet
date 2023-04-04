@@ -1,5 +1,4 @@
-import { Component, Pipe, PipeTransform, ViewEncapsulation } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 
 
