@@ -2,8 +2,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import { chipsData } from './chipsData';
-import { FormControl } from '@angular/forms';
+import { chipsData } from '../chipsData';
 
 
 @Component({
@@ -93,19 +92,16 @@ export class ChipsComponent {
   }
   
 
+  //chips with avatar!!!!
+  chipsWithAvatar: string = chipsData.chipsWithAvatar;
 
 
-//chips with avatar!!!!
-chipsWithAvatar: string = chipsData.chipsWithAvatar;
+  //chips with autocomplete
+  chipsWithhAutocompleteHTML: string = chipsData.chipsWithhAutocompleteHTML;
+  chipsWithhAutocompleteTS: string = chipsData.chipsWithhAutocompleteTS;
 
 
-
-//chips with autocomplete
-chipsWithhAutocompleteHTML: string = chipsData.chipsWithhAutocompleteHTML;
-chipsWithhAutocompleteTS: string = chipsData.chipsWithhAutocompleteTS;
-
-
-//chips with form control + buttons
-chipsWithhFormControlAndButtonsHTML: string = chipsData.chipsWithhFormControlAndButtonsHTML;
-chipsWithhFormControlAndButtonsTS: string = chipsData.chipsWithhFormControlAndButtonsTS;
+  //chips with form control + buttons
+  chipsWithhFormControlAndButtonsHTML: string = chipsData.chipsWithhFormControlAndButtonsHTML;
+  chipsWithhFormControlAndButtonsTS: string = chipsData.chipsWithhFormControlAndButtonsTS;
 }

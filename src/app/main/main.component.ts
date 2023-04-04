@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
 import { ButtonsComponent } from '../pages/buttons/buttons.component';
-import { ChipsComponent } from '../pages/chips/chips.component';
+import { ChipsComponent } from '../pages/chips/chips-component/chips.component';
 
 
 @Component({

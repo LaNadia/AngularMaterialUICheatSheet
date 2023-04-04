@@ -8,22 +8,24 @@ import { MaterialExportModule } from './material-export/material-export.module';
 import { MainComponent } from './main/main.component';
 import { MainModule } from './main/main.module';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+import { ChipsModule } from "./pages/chips/chips.module";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialExportModule,
-    CodemirrorModule,
-    MainModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MainComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialExportModule,
+        CodemirrorModule,
+        MainModule,
+        ChipsModule
+    ]
 })
 export class AppModule { }
