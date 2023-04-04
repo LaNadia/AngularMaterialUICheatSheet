@@ -13,7 +13,7 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

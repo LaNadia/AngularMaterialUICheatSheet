@@ -1,0 +1,26 @@
+<mat-card-header>Chips with autocomplete</mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content >
+                <form>
+                  <mat-form-field class="example-chip-list" appearance="fill">
+                    <mat-label>Favorite Berries</mat-label>
+                    <mat-chip-grid #chipGrid aria-label="Berries selection">
+                      <mat-chip-row *ngFor="let berry of berries" (removed)="removeBerry(berry)">
+                        {{berry}}
+                        <button matChipRemove [attr.aria-label]="'remove ' + berry">
+                          <mat-icon>cancel</mat-icon>
+                        </button>
+                      </mat-chip-row>
+                    </mat-chip-grid>
+                    <input placeholder="New Berry..." #berryInput [formControl]="berryCtrl"
+                      [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      (matChipInputTokenEnd)="addBerry($event)"/>
+                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                      <mat-option *ngFor="let berry of filteredBerries | async" [value]="berry">
+                        {{berry}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </form>
+            </mat-card-content>
