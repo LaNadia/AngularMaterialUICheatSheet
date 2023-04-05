@@ -4,6 +4,7 @@ import { ButtonsComponent } from '../components/buttons/buttons-component/button
 import { ButtontoggleComponent } from '../components/buttons/buttontoggle/buttontoggle.component';
 import { IconsComponent } from '../components/buttons/icons/icons.component';
 import { ChipsComponent } from '../components/chips/chips-component/chips.component';
+import { BadgeComponent } from '../components/badge/badge.component';
 
 
 
@@ -37,6 +38,9 @@ export class MainComponent {
           break;
         case 'toggleButtons': 
           this.element = ButtontoggleComponent;
+          break;
+        case 'badge': 
+          this.element = BadgeComponent;
           break;
         
         default:

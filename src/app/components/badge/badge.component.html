@@ -1,0 +1,254 @@
+<mat-grid-list cols="5" rowHeight="80rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="1" >
+        <mat-card>
+
+            <mat-card-header>
+                <mat-card-title>Badge</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                    <span matBadge="5">notification</span>
+                    <span matBadge="5" matBadgeOverlap="false">notification</span>
+                    <span matBadge="5"><mat-icon>mail_outline</mat-icon></span>
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Badge with colors</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                    <span matBadge="5" matBadgeColor="primary">notification</span>
+                    <span matBadge="5" matBadgeColor="accent">notification</span>
+                    <span matBadge="5" matBadgeColor="warn">notification</span>
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Badge sizes</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                    <span matBadge="5" matBadgeSize="small">notification small</span>
+                    <span matBadge="5" matBadgeSize="medium">notification medium</span>
+                    <span matBadge="5" matBadgeSize="large">notification large</span>
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Badge position</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="min-height: 15rem;">
+                    <span matBadge="5" matBadgePosition="below before">notification</span>
+                    <span matBadge="5" matBadgePosition="below after">notification</span>
+                    <span matBadge="5" matBadgePosition="above before">notification</span>
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Badge binded to value</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                    <span [matBadge]="notifications">notification</span>
+                    <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0">notification</span>
+            </mat-card-content>
+
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2">
+        <mat-card>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Badge</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="min-height: 10rem; padding-top: 1rem">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code + explanation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      
+                                <mat-tab label="HTML">
+                                  <ng-template matTabContent>
+                                  <ngx-codemirror
+                                    [(ngModel)]="badge"
+                                    [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"
+                                ></ngx-codemirror>
+                                </ng-template>
+                                </mat-tab>
+                                
+                              </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                    <mat-card-title>Badge with colors</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="min-height: 10rem; padding-top: 1rem">
+                <mat-accordion>
+                        <mat-expansion-panel>
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              See source code + explanation
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                          
+                                    <mat-tab label="HTML">
+                                      <ng-template matTabContent>
+                                      <ngx-codemirror
+                                        [(ngModel)]="badgeWithColors"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                    </ng-template>
+                                    </mat-tab>
+                                    
+                                  </mat-tab-group>
+                        </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Badge sizes</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="min-height: 10rem; padding-top: 1rem">
+                <mat-accordion>
+                            <mat-expansion-panel>
+                              <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                  See source code + explanation
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+                                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                              
+                                        <mat-tab label="HTML">
+                                          <ng-template matTabContent>
+                                          <ngx-codemirror
+                                            [(ngModel)]="badgeSizes"
+                                            [options]="{
+                                            lineNumbers: true,
+                                            theme: 'material',
+                                            mode: 'markdown'
+                                            }"
+                                        ></ngx-codemirror>
+                                        </ng-template>
+                                        </mat-tab>
+                                        
+                                      </mat-tab-group>
+                            </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Badge position</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="min-height: 15rem; padding-top: 1rem">
+                <mat-accordion>
+                                <mat-expansion-panel>
+                                  <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                      See source code + explanation
+                                    </mat-panel-title>
+                                  </mat-expansion-panel-header>
+                                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                  
+                                            <mat-tab label="HTML">
+                                              <ng-template matTabContent>
+                                              <ngx-codemirror
+                                                [(ngModel)]="badgePosition"
+                                                [options]="{
+                                                lineNumbers: true,
+                                                theme: 'material',
+                                                mode: 'markdown'
+                                                }"
+                                            ></ngx-codemirror>
+                                            </ng-template>
+                                            </mat-tab>
+                                            
+                                          </mat-tab-group>
+                                </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Badge binded to value</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="min-height: 10rem; padding-top: 1rem">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                      
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror
+                                    [(ngModel)]="badgeBindedToValue"
+                                    [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"
+                                ></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>                      
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+    </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+</mat-grid-list>
+
+

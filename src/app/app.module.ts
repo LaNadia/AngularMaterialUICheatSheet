@@ -16,7 +16,7 @@ import { ChipsModule } from './components/chips/chips.module';
 @NgModule({
     declarations: [
         AppComponent,
-        MainComponent
+        MainComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

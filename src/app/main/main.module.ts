@@ -8,6 +8,7 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from '../components/buttons/buttons.module';
 import { ChipsModule } from '../components/chips/chips.module';
+import { BadgeComponent } from '../components/badge/badge.component';
 
 
 
@@ -18,7 +19,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    BadgeComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -30,5 +33,8 @@ const routes: Routes = [
     ButtonsModule
   ],
 
+  exports: [ 
+    BadgeComponent
+  ]
 })
 export class MainModule { }
