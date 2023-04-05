@@ -1,7 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
-import { ButtonsComponent } from '../pages/buttons/buttons.component';
-import { ChipsComponent } from '../pages/chips/chips-component/chips.component';
+import { MatSidenav } from '@angular/material/sidenav';
+import { ButtonsComponent } from '../components/buttons/buttons-component/buttons.component';
+import { ButtontoggleComponent } from '../components/buttons/buttontoggle/buttontoggle.component';
+import { IconsComponent } from '../components/buttons/icons/icons.component';
+import { ChipsComponent } from '../components/chips/chips-component/chips.component';
+
 
 
 @Component({
@@ -28,6 +31,12 @@ export class MainComponent {
           break;
         case 'chips':
           this.element = ChipsComponent;
+          break;
+        case 'icons': 
+          this.element = IconsComponent;
+          break;
+        case 'toggleButtons': 
+          this.element = ButtontoggleComponent;
           break;
         
         default:

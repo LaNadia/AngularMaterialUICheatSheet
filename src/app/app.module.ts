@@ -8,8 +8,9 @@ import { MaterialExportModule } from './material-export/material-export.module';
 import { MainComponent } from './main/main.component';
 import { MainModule } from './main/main.module';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
-import { ChipsModule } from "./pages/chips/chips.module";
-import { ButtonsModule } from './pages/buttons/buttons.module';
+import { ButtonsModule } from './components/buttons/buttons.module';
+import { ChipsModule } from './components/chips/chips.module';
+
 
 
 @NgModule({

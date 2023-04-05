@@ -1,4 +1,3 @@
-
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <button mat-button (click)="toggleSidenav($event)"><mat-icon>menu</mat-icon>Menu</button>
@@ -11,12 +10,21 @@
   
     <mat-sidenav #sidenav mode="side">
         <mat-list>
+            <mat-expansion-panel class="mat-elevation-z0">
+                <mat-expansion-panel-header>
+                    Buttons
+                </mat-expansion-panel-header>
+                <mat-nav-list>
+                    <button mat-button (click)="showElement('buttons')">Buttons</button>
+                    <button mat-button (click)="showElement('toggleButtons')">Toggle Buttons</button>
+                    <button mat-button (click)="showElement('icons')">Icons</button>
+                </mat-nav-list>
+            </mat-expansion-panel>
             <mat-list-item>
-                <button mat-button (click)="showElement('buttons')">Buttons</button>
+                <button mat-button class="navButton" (click)="showElement('chips')"><h3>Chips</h3></button>
+         
             </mat-list-item>
-            <mat-list-item>
-                <button mat-button (click)="showElement('chips')">Chips</button>
-            </mat-list-item>
+
             <!-- 
             <mat-list-item>
                 <a [routerLink]="['/about-us']">see drag&drop</a>
@@ -28,10 +36,10 @@
     </mat-sidenav>
   
     <mat-sidenav-content >
-      <!-- <div *ngIf="!element">Show this while nothing is chosen</div>
+      <div *ngIf="!element">Show this while nothing is chosen</div>
       <ng-container *ngComponentOutlet="(element)" ></ng-container>
-     -->
-     <app-buttontoggle></app-buttontoggle>
+    
+   
     </mat-sidenav-content>
   
 </mat-sidenav-container>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { buttonsData } from '../buttonsData';
 
 @Component({
   selector: 'app-icons',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent {
-
+  icons: string = buttonsData.icons;
 }

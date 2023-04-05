@@ -6,8 +6,9 @@ import { MaterialExportModule } from '../material-export/material-export.module'
 
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ChipsModule } from '../pages/chips/chips.module';
-import { ButtonsModule } from '../pages/buttons/buttons.module';
+import { ButtonsModule } from '../components/buttons/buttons.module';
+import { ChipsModule } from '../components/chips/chips.module';
+
 
 
 const routes: Routes = [
