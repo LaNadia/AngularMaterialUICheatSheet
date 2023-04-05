@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from '../components/buttons/buttons.module';
 import { ChipsModule } from '../components/chips/chips.module';
 import { BadgeComponent } from '../components/badge/badge.component';
+import { ProgressbarComponent } from '../components/progressbar/progressbar.component';
+import { ProgressspinnerComponent } from '../components/progressspinner/progressspinner.component';
 
 
 
@@ -20,7 +22,9 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    BadgeComponent
+    BadgeComponent,
+    ProgressbarComponent,
+    ProgressspinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +38,9 @@ const routes: Routes = [
   ],
 
   exports: [ 
-    BadgeComponent
+    BadgeComponent,
+    ProgressbarComponent,
+    ProgressspinnerComponent,
   ]
 })
 export class MainModule { }

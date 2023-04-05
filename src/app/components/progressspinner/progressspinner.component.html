@@ -1,0 +1,195 @@
+<mat-grid-list cols="6" rowHeight="100rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2" >
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Basic progress-spinner</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-spinner></mat-spinner>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+            <mat-card-header>
+                <mat-card-title>Determinate progress-spinner</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-progress-spinner value="50" color="accent"></mat-progress-spinner>
+            </mat-card-content>
+
+            <mat-divider style="margin-top: .2rem"></mat-divider>
+            <mat-card-header >
+                <mat-card-title>Configurable progress spinner</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <h2 class="example-h2">Progress spinner configuration</h2>
+            
+                <section class="example-section">
+                  <label class="example-margin">Color:</label>
+                  <mat-radio-group [(ngModel)]="color">
+                    <mat-radio-button class="example-margin" value="primary">
+                      Primary
+                    </mat-radio-button>
+                    <mat-radio-button class="example-margin" value="accent">
+                      Accent
+                    </mat-radio-button>
+                    <mat-radio-button class="example-margin" value="warn">
+                      Warn
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </section>
+            
+                <section class="example-section">
+                  <label class="example-margin">Mode:</label>
+                  <mat-radio-group [(ngModel)]="mode">
+                    <mat-radio-button class="example-margin" value="determinate">
+                      Determinate
+                    </mat-radio-button>
+                    <mat-radio-button class="example-margin" value="indeterminate">
+                      Indeterminate
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </section>
+            
+                <section class="example-section" *ngIf="mode === 'determinate'">
+                  <label class="example-margin">Progress:</label>
+                  <mat-slider class="example-margin">
+                    <input type="range" [(ngModel)]="value" matSliderThumb>
+                  </mat-slider>
+                </section>
+              
+                <h2 class="example-h2">Result</h2>
+            
+                <mat-progress-spinner
+                    class="example-margin"
+                    [color]="color"
+                    [mode]="mode"
+                    [value]="value">
+                </mat-progress-spinner>
+            </mat-card-content>
+
+        </mat-card>
+            
+        
+
+
+    </mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Basic progress-spinner</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="BasicProgressSpinner"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+            <mat-card-header>
+                <mat-card-title>Determinate progress-spinner</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="DeterminateProgressSpinner"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+            <mat-card-header>
+                <mat-card-title>Configurable progress spinner</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code + explanation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                                <mat-tab label="HTML">
+                                  <ng-template matTabContent>
+                                    <ngx-codemirror
+                                        [(ngModel)]="ConfigurableProgressSpinnerHTML"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                  </ng-template>
+                                </mat-tab>
+                                <mat-tab label="TS">
+                                  <ng-template matTabContent>
+                                    <ngx-codemirror
+                                        [(ngModel)]="ConfigurableProgressSpinnerTS"
+                                        [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"
+                                    ></ngx-codemirror>
+                                 </ng-template>
+                                </mat-tab>
+
+                                <mat-tab label="Explanation">
+                                  <ng-template matTabContent>
+                                    here
+                                 </ng-template>
+                                </mat-tab>
+                                
+                            </mat-tab-group>
+                      </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+            
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+
+</mat-grid-list>

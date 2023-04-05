@@ -5,6 +5,8 @@ import { ButtontoggleComponent } from '../components/buttons/buttontoggle/button
 import { IconsComponent } from '../components/buttons/icons/icons.component';
 import { ChipsComponent } from '../components/chips/chips-component/chips.component';
 import { BadgeComponent } from '../components/badge/badge.component';
+import { ProgressbarComponent } from '../components/progressbar/progressbar.component';
+import { ProgressspinnerComponent } from '../components/progressspinner/progressspinner.component';
 
 
 
@@ -41,6 +43,12 @@ export class MainComponent {
           break;
         case 'badge': 
           this.element = BadgeComponent;
+          break;
+        case 'progressbar': 
+          this.element = ProgressbarComponent;
+          break;
+          case 'progressspinner': 
+          this.element = ProgressspinnerComponent;
           break;
         
         default:
