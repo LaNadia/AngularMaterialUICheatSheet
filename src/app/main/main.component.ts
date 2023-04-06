@@ -7,6 +7,10 @@ import { ChipsComponent } from '../components/chips/chips-component/chips.compon
 import { BadgeComponent } from '../components/badge/badge.component';
 import { ProgressbarComponent } from '../components/progressbar/progressbar.component';
 import { ProgressspinnerComponent } from '../components/progressspinner/progressspinner.component';
+import { CardComponent } from '../components/card/card.component';
+import { AutocompleteComponent } from '../components/autocomplete/autocomplete.component';
+import { CheckboxComponent } from '../components/checkbox/checkbox.component';
+import { DatepickerComponent } from '../components/datepicker/datepicker.component';
 
 
 
@@ -47,9 +51,23 @@ export class MainComponent {
         case 'progressbar': 
           this.element = ProgressbarComponent;
           break;
-          case 'progressspinner': 
+        case 'progressspinner': 
           this.element = ProgressspinnerComponent;
           break;
+        case 'cards': 
+          this.element = CardComponent;
+          break;
+        case 'autocomplete': 
+          this.element = AutocompleteComponent;
+          break;
+        case 'checkbox': 
+          this.element = CheckboxComponent;
+          break;
+        case 'datepicker': 
+          this.element = DatepickerComponent;
+          break;
+
+          
         
         default:
           this.element = null;

@@ -1,0 +1,174 @@
+<mat-grid-list cols="5" rowHeight="130rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+
+    <mat-grid-tile role="listitem" colspan="1" >
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Simple autocomplete</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Number</mat-label>
+                      <input type="text"
+                             placeholder="Pick one"
+                             aria-label="Number"
+                             matInput
+                             [formControl]="myControl"
+                             [matAutocomplete]="auto1">
+                      <mat-autocomplete #auto1="matAutocomplete">
+                        <mat-option *ngFor="let option of options" [value]="option">
+                          {{option}}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Plain input autocomplete</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <form class="example-form">
+                    <input type="text"
+                           placeholder="Search for a street"
+                           [formControl]="control"
+                           [matAutocomplete]="auto2"
+                           class="example-input">
+                    <mat-autocomplete #auto2="matAutocomplete">
+                      <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                        {{street}}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </form>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Autocomplete overview</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>State</mat-label>
+                      <input matInput
+                             aria-label="State"
+                             [matAutocomplete]="auto3"
+                             [formControl]="stateCtrl">
+                      <mat-autocomplete #auto3="matAutocomplete">
+                        <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                          <img alt="" class="example-option-img" [src]="state.flag" height="25">
+                          <span>{{state.name}}</span> |
+                          <small>Population: {{state.population}}</small>
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  
+                    <br>
+                  
+                    <mat-slide-toggle
+                      [checked]="stateCtrl.disabled"
+                      (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
+                      Disable Input?
+                    </mat-slide-toggle>
+                  </form>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Option groups autocomplete</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <form [formGroup]="stateForm">
+                    <mat-form-field appearance="fill">
+                      <mat-label>States Group</mat-label>
+                      <input type="text"
+                             matInput
+                             formControlName="stateGroup"
+                             required
+                             [matAutocomplete]="autoGroup">
+                        <mat-autocomplete #autoGroup="matAutocomplete">
+                          <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                            <mat-option *ngFor="let name of group.names" [value]="name">
+                              {{name}}
+                            </mat-option>
+                        </mat-optgroup>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Filter autocomplete</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Number</mat-label>
+                      <input type="text"
+                             placeholder="Pick one"
+                             aria-label="Number"
+                             matInput
+                             [formControl]="myControl2"
+                             [matAutocomplete]="auto5">
+                      <mat-autocomplete #auto5="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
+                          {{option}}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+                
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Display value autocomplete (picked values)</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Assignee</mat-label>
+                    <input type="text" matInput [formControl]="myControl3" [matAutocomplete]="auto6">
+                    <mat-autocomplete #auto6="matAutocomplete" [displayWith]="displayFn">
+                    <mat-option *ngFor="let option of filteredOptions3 | async" [value]="option">
+                        {{option.name}}
+                    </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                </form>
+                
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+      </mat-card>
+   </mat-grid-tile>
+
+</mat-grid-list>

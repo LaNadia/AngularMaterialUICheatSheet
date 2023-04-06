@@ -1,0 +1,383 @@
+<mat-grid-list cols="6" rowHeight="160rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2" >
+        <mat-card class="mat-card-outer">
+            <mat-card-header>
+                <mat-card-title>Simple card</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-outer">
+                <mat-card>
+                    <mat-card-content>Simple card</mat-card-content>
+                </mat-card>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with sub-title</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-outer">
+                <mat-card class="example-card">
+                    <mat-card-header class="mat-card-header-inner">
+                      <mat-card-title>Shiba Inu</mat-card-title>
+                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p>{{longText}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <!-- //explanation needed!!! + css-->
+            <mat-card-header>
+                <mat-card-title>Card with media size</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-outer">
+                <mat-card class="example-card">
+                    <mat-card-header class="mat-card-header-inner">
+                      <mat-card-title-group>
+                        <mat-card-title>Shiba Inu</mat-card-title>
+                        <mat-card-subtitle>Small</mat-card-subtitle>
+                        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                      </mat-card-title-group>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{longText}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with footer</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-outer">
+                <mat-card class="example-card">
+                    <mat-card-header class="mat-card-header-inner">
+                      <mat-card-title>Shiba Inu</mat-card-title>
+                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p>This card has divider and indeterminate progress as footer</p>
+                      <p>{{longText}}</p>
+                      <mat-divider></mat-divider>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                    <mat-card-footer>
+                      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                    </mat-card-footer>
+                  </mat-card>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Card with multiple sections</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-outer">
+                <mat-card class="example-card">
+                    <mat-card-header class="mat-card-header-inner">
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>Shiba Inu</mat-card-title>
+                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                      <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+ <!-- //explanation needed!!! -->
+            <mat-card-header>
+                <mat-card-title>Card with actions alignment option</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-outer">
+                <mat-card>
+                    <mat-card-header class="mat-card-header-inner">
+                      <mat-card-title>Actions Buttons</mat-card-title>
+                      <mat-card-subtitle>Start</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-actions>
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                  </mat-card>
+                  <br>
+                  <mat-card>
+                    <mat-card-header class="mat-card-header-inner">
+                      <mat-card-title>Actions Buttons</mat-card-title>
+                      <mat-card-subtitle>End</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-actions align="end">
+                      <button mat-button>LIKE</button>
+                      <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </mat-card-content>
+            
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile role="listitem"  colspan="2" >
+        <mat-card class="mat-card-outer">
+            <mat-card-header>
+                <mat-card-title>Basic card</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-main" style="min-height: 11rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="BasicCard"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with sub-title</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-main"  style="min-height: 14rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="CardSsubTitle"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with media size</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-main"  style="min-height: 14.5rem">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        See source code + explanation
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                          <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                              <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                  <ngx-codemirror
+                                      [(ngModel)]="CardMediaSizeHTML"
+                                      [options]="{
+                                      lineNumbers: true,
+                                      theme: 'material',
+                                      mode: 'markdown'
+                                      }"
+                                  ></ngx-codemirror>
+                                </ng-template>
+                              </mat-tab>
+                              <mat-tab label="CSS">
+                                <ng-template matTabContent>
+                                  <ngx-codemirror
+                                      [(ngModel)]="CardMediaSizeCSS"
+                                      [options]="{
+                                      lineNumbers: true,
+                                      theme: 'material',
+                                      mode: 'markdown'
+                                      }"
+                                  ></ngx-codemirror>
+                                </ng-template>
+                              </mat-tab>
+                              <mat-tab label="Explanations template">
+                                  <ng-template matTabContent>
+                                  please write 
+                                 </ng-template>
+                              </mat-tab>
+                          </mat-tab-group>
+                    </mat-expansion-panel>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with footer</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-main"  style="min-height: 17.3rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                            <ngx-codemirror
+                            [(ngModel)]="CardFooter"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                        ></ngx-codemirror>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with multiple sections</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-main"  style="min-height: 38rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          See source code
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                          <ng-template matTabContent>
+                            <ngx-codemirror
+                                [(ngModel)]="CardMultipleSectionHTML"
+                                [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"
+                            ></ngx-codemirror>
+                          </ng-template>
+                        </mat-tab>
+                        <mat-tab label="CSS">
+                            <ng-template matTabContent>
+                              <ngx-codemirror
+                                  [(ngModel)]="CardMultipleSectionsCSS"
+                                  [options]="{
+                                  lineNumbers: true,
+                                  theme: 'material',
+                                  mode: 'markdown'
+                                  }"
+                              ></ngx-codemirror>
+                            </ng-template>
+                          </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                            please write 
+                           </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+
+
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Card with actions alignment option</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-main" >
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        See source code + explanation
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                          <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                              <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                  <ngx-codemirror
+                                      [(ngModel)]="CardActionsAlignmentOption"
+                                      [options]="{
+                                      lineNumbers: true,
+                                      theme: 'material',
+                                      mode: 'markdown'
+                                      }"
+                                  ></ngx-codemirror>
+                                </ng-template>
+                              </mat-tab>
+                              <mat-tab label="Explanations template">
+                                  <ng-template matTabContent>
+                                  please write 
+                                 </ng-template>
+                              </mat-tab>
+                          </mat-tab-group>
+                    </mat-expansion-panel>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+
+
+            </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+</mat-grid-list>

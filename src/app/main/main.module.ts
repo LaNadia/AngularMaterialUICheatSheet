@@ -11,6 +11,10 @@ import { ChipsModule } from '../components/chips/chips.module';
 import { BadgeComponent } from '../components/badge/badge.component';
 import { ProgressbarComponent } from '../components/progressbar/progressbar.component';
 import { ProgressspinnerComponent } from '../components/progressspinner/progressspinner.component';
+import { AutocompleteComponent } from '../components/autocomplete/autocomplete.component';
+import { CardComponent } from '../components/card/card.component';
+import { CheckboxComponent } from '../components/checkbox/checkbox.component';
+import { DatepickerComponent } from '../components/datepicker/datepicker.component';
 
 
 
@@ -25,6 +29,10 @@ const routes: Routes = [
     BadgeComponent,
     ProgressbarComponent,
     ProgressspinnerComponent,
+    CardComponent,
+    CheckboxComponent,
+    DatepickerComponent,
+    AutocompleteComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +49,10 @@ const routes: Routes = [
     BadgeComponent,
     ProgressbarComponent,
     ProgressspinnerComponent,
+    CardComponent,
+    CheckboxComponent,
+    DatepickerComponent,
+    AutocompleteComponent,
   ]
 })
 export class MainModule { }

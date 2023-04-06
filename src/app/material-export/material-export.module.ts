@@ -34,6 +34,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -72,7 +73,8 @@ const material = [
   MatChipsModule,
   MatSliderModule,
   DragDropModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSlideToggleModule
 ]
 
 

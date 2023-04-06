@@ -1,0 +1,383 @@
+
+<mat-grid-list cols="4" rowHeight="120rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="1" >
+        <mat-card>
+
+            <mat-card-header>
+                <mat-card-title>Basic datepicker</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker1">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Basic date range picker</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker2">
+                      <input matStartDate placeholder="Start date">
+                      <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker2></mat-date-range-picker>
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker start date</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker3">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3 startView="year" [startAt]="startDate"></mat-datepicker>
+                  </mat-form-field>
+                
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker + filter exclunding weekdays</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker4">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
+                    <mat-datepicker #picker4></mat-datepicker>
+                  </mat-form-field>
+                
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+             <mat-card-header>
+                <mat-card-title>Datepicker with min & max period</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker5">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker5"></mat-datepicker-toggle>
+                    <mat-datepicker #picker5></mat-datepicker>
+                  </mat-form-field>
+       
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker action buttons</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field appearance="fill" class="example-form-field">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="datepicker1">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker1"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker1>
+                      <mat-datepicker-actions>
+                        <button mat-button matDatepickerCancel>Cancel</button>
+                        <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                      </mat-datepicker-actions>
+                    </mat-datepicker>
+                  </mat-form-field>
+                
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker open method</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker6">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker #picker6></mat-datepicker>
+                  </mat-form-field>
+                  <button mat-raised-button (click)="picker6.open()">Open</button>
+                
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker palette colors</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field color="accent" appearance="fill">
+                    <mat-label>Inherited calendar color</mat-label>
+                    <input matInput [matDatepicker]="picker7">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker7"></mat-datepicker-toggle>
+                    <mat-datepicker #picker7></mat-datepicker>
+                  </mat-form-field>
+            </mat-card-content>
+
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker with custom icon</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker8">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker8">
+                      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker8></mat-datepicker>
+                  </mat-form-field>
+  
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Disabled datepicker</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <p>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Completely disabled</mat-label>
+                      <input matInput [matDatepicker]="dp1" disabled>
+                      <mat-hint>MM/DD/YYYY</mat-hint>
+                      <mat-datepicker-toggle matIconSuffix [for]="dp1"></mat-datepicker-toggle>
+                      <mat-datepicker #dp1></mat-datepicker>
+                    </mat-form-field>
+                  </p>
+                  
+                  <p>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Popup disabled</mat-label>
+                      <input matInput [matDatepicker]="dp2">
+                      <mat-hint>MM/DD/YYYY</mat-hint>
+                      <mat-datepicker-toggle matIconSuffix [for]="dp2" disabled></mat-datepicker-toggle>
+                      <mat-datepicker #dp2></mat-datepicker>
+                    </mat-form-field>
+                  </p>
+                  
+                  <p>
+                    <mat-form-field appearance="fill">
+                      <mat-label>Input disabled</mat-label>
+                      <input matInput [matDatepicker]="dp3" disabled>
+                      <mat-hint>MM/DD/YYYY</mat-hint>
+                      <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+                      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                  </p>
+  
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker input and change events</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Input & change events</mat-label>
+                    <input matInput [matDatepicker]="picker9"
+                           (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker9"></mat-datepicker-toggle>
+                    <mat-datepicker #picker9></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <div class="example-events">
+                    <div *ngFor="let e of events">{{e}}</div>
+                  </div>
+  
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker inline calendar example</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-card class="demo-inline-calendar-card">
+                    <mat-calendar [(selected)]="selected"></mat-calendar>
+                  </mat-card>
+                  <p>Selected date: {{selected}}</p>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Datepicker touch UI</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker10">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker10"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker10></mat-datepicker>
+                  </mat-form-field>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Datepicker selected value</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Angular forms</mat-label>
+                    <input matInput [matDatepicker]="picker11" [formControl]="date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker11"></mat-datepicker-toggle>
+                    <mat-datepicker #picker11></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill">
+                    <mat-label>Angular forms (w/ deserialization)</mat-label>
+                    <input matInput [matDatepicker]="picker12"
+                           [formControl]="serializedDate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker12"></mat-datepicker-toggle>
+                    <mat-datepicker #picker12></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="fill">
+                    <mat-label>Value binding</mat-label>
+                    <input matInput [matDatepicker]="picker13" [value]="date.value">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker13"></mat-datepicker-toggle>
+                    <mat-datepicker #picker13></mat-datepicker>
+                  </mat-form-field>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Date range picker comparison ranges</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>First campaign</mat-label>
+                    <mat-date-range-input
+                      [formGroup]="campaignOne"
+                      [rangePicker]="campaignOnePicker"
+                      [comparisonStart]="campaignTwo.value.start"
+                      [comparisonEnd]="campaignTwo.value.end">
+                      <input matStartDate placeholder="Start date" formControlName="start">
+                      <input matEndDate placeholder="End date" formControlName="end">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+                  </mat-form-field>
+                  
+                  <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>Second campaign</mat-label>
+                    <mat-date-range-input
+                      [formGroup]="campaignTwo"
+                      [rangePicker]="campaignTwoPicker"
+                      [comparisonStart]="campaignOne.value.start"
+                      [comparisonEnd]="campaignOne.value.end">
+                      <input matStartDate placeholder="Start date" formControlName="start">
+                      <input matEndDate placeholder="End date" formControlName="end">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matIconSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+                  </mat-form-field>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Date range picker forms integration</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [formGroup]="range" [rangePicker]="picker14">
+                      <input matStartDate formControlName="start" placeholder="Start date">
+                      <input matEndDate formControlName="end" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker14"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker14></mat-date-range-picker>
+                  
+                    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+                    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+                  </mat-form-field>
+                  
+                  <p>Selected range: {{range.value | json}}</p>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+
+
+
+
+
+
+
+
+
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile colspan="2" ></mat-grid-tile>
+
+
+
+</mat-grid-list>
