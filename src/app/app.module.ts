@@ -10,6 +10,9 @@ import { MainModule } from './main/main.module';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { ButtonsModule } from './components/buttons/buttons.module';
 import { ChipsModule } from './components/chips/chips.module';
+import { FormfieldComponent } from './components/formfield/formfield.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import { RadiobuttonComponent } from './components/radiobutton/radiobutton.component';
 
 
 

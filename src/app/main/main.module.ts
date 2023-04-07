@@ -15,6 +15,9 @@ import { AutocompleteComponent } from '../components/autocomplete/autocomplete.c
 import { CardComponent } from '../components/card/card.component';
 import { CheckboxComponent } from '../components/checkbox/checkbox.component';
 import { DatepickerComponent } from '../components/datepicker/datepicker.component';
+import { FormfieldComponent } from '../components/formfield/formfield.component';
+import { PaginatorComponent } from '../components/paginator/paginator.component';
+import { RadiobuttonComponent } from '../components/radiobutton/radiobutton.component';
 
 
 
@@ -33,6 +36,9 @@ const routes: Routes = [
     CheckboxComponent,
     DatepickerComponent,
     AutocompleteComponent,
+    FormfieldComponent,
+    PaginatorComponent,
+    RadiobuttonComponent,
   ],
   imports: [
     CommonModule,
@@ -53,6 +59,9 @@ const routes: Routes = [
     CheckboxComponent,
     DatepickerComponent,
     AutocompleteComponent,
+    FormfieldComponent,
+    PaginatorComponent,
+    RadiobuttonComponent,
   ]
 })
 export class MainModule { }

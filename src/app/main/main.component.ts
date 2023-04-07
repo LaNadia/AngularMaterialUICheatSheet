@@ -11,6 +11,9 @@ import { CardComponent } from '../components/card/card.component';
 import { AutocompleteComponent } from '../components/autocomplete/autocomplete.component';
 import { CheckboxComponent } from '../components/checkbox/checkbox.component';
 import { DatepickerComponent } from '../components/datepicker/datepicker.component';
+import { RadiobuttonComponent } from '../components/radiobutton/radiobutton.component';
+import { FormfieldComponent } from '../components/formfield/formfield.component';
+import { PaginatorComponent } from '../components/paginator/paginator.component';
 
 
 
@@ -66,9 +69,18 @@ export class MainComponent {
         case 'datepicker': 
           this.element = DatepickerComponent;
           break;
+        case 'radiobutton': 
+          this.element = RadiobuttonComponent;
+          break;
+        case 'formfield': 
+          this.element = FormfieldComponent;
+          break;
+        case 'paginator': 
+          this.element = PaginatorComponent;
+          break;
 
           
-        
+          
         default:
           this.element = null;
       }
