@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Observable, startWith, map } from 'rxjs';
+import { autocompleteData } from './autocompleteData';
 
 
 interface User {
@@ -25,6 +26,24 @@ interface User {
   styleUrls: ['./autocomplete.component.scss']
 })
 export class AutocompleteComponent implements OnInit{
+
+
+  SimpleAutocompleteHTML: string = autocompleteData.SimpleAutocompleteHTML;
+  SimpleAutocompleteTS: string = autocompleteData.SimpleAutocompleteTS;
+  PlainInputAutocompleteHTML: string = autocompleteData.PlainInputAutocompleteHTML;
+  PlainInputAutocompleteTS: string = autocompleteData.PlainInputAutocompleteTS;
+  AutocompleteOverviewHTML: string = autocompleteData.AutocompleteOverviewHTML;
+  AutocompleteOverviewTS: string = autocompleteData.AutocompleteOverviewTS;
+  OptionGroupsAutocompleteHTML: string = autocompleteData.OptionGroupsAutocompleteHTML;
+  OptionGroupsAutocompleteTS: string = autocompleteData.OptionGroupsAutocompleteTS;
+  FilterAutocompleteHTML: string = autocompleteData.FilterAutocompleteHTML;
+  FilterAutocompleteTS: string = autocompleteData.FilterAutocompleteTS;
+  DisplayValueAutocompleteHTML: string = autocompleteData.DisplayValueAutocompleteHTML;
+  DisplayValueAutocompleteTS: string = autocompleteData.DisplayValueAutocompleteTS;
+
+
+
+
  
   ///Simple autocomplete
   myControl = new FormControl('');

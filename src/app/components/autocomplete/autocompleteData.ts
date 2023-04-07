@@ -1,6 +1,6 @@
-export const ProgressSpinnerData: any  ={
+export const autocompleteData: any  ={
 
-    SimpleAutocompleteHTML:
+  SimpleAutocompleteHTML:
     `<form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Number</mat-label>
@@ -16,7 +16,7 @@ export const ProgressSpinnerData: any  ={
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-  </form>`,
+    </form>`,
 
   SimpleAutocompleteTS:
   `myControl = new FormControl('');
@@ -34,9 +34,9 @@ export const ProgressSpinnerData: any  ={
       {{street}}
     </mat-option>
   </mat-autocomplete>
-</form>`,
+  </form>`,
 
-PlainInputAutocompleteTS:
+  PlainInputAutocompleteTS:
     `control = new FormControl('');
     streets: string[] = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
     filteredStreets!: Observable<string[]>;
@@ -57,7 +57,7 @@ PlainInputAutocompleteTS:
     return value.toLowerCase().replace(/\s/g, '');
     }`,
 
-    AutocompleteOverviewHTML:
+  AutocompleteOverviewHTML:
     `<form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>State</mat-label>
@@ -81,7 +81,7 @@ PlainInputAutocompleteTS:
       (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
       Disable Input?
     </mat-slide-toggle>
-  </form>`,
+     </form>`,
   AutocompleteOverviewTS:
   ` stateCtrl = new FormControl('');
   filteredStates: Observable<State[]>;
@@ -124,7 +124,7 @@ PlainInputAutocompleteTS:
     const filterValue = value.toLowerCase();
 
     return this.states.filter(state => state.name.toLowerCase().includes(filterValue));
-  }`,
+   }`,
 
   OptionGroupsAutocompleteHTML:
   `<form [formGroup]="stateForm">
@@ -292,7 +292,7 @@ PlainInputAutocompleteTS:
     }
     }`,
 
-    FilterAutocompleteHTML:
+  FilterAutocompleteHTML:
     `<form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Number</mat-label>
@@ -308,7 +308,7 @@ PlainInputAutocompleteTS:
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-  </form>`,
+    </form>`,
 
   FilterAutocompleteTS:
   `myControl = new FormControl('');
@@ -339,7 +339,7 @@ PlainInputAutocompleteTS:
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-</form>`,
+  </form>`,
   DisplayValueAutocompleteTS:
   ` myControl = new FormControl<string | User>('');
   options: User[] = [{name: 'Mary'}, {name: 'Shelley'}, {name: 'Igor'}];

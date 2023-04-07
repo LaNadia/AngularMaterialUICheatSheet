@@ -1,4 +1,4 @@
-export const ProgressSpinnerData: any  ={
+export const checkboxData: any  ={
 
     basicCheckboxesHTML:
     `<section class="example-section">

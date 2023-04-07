@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { checkboxData } from './checkboxData';
 
 @Component({
   selector: 'app-checkbox',
@@ -7,6 +8,16 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./checkbox.component.scss']
 })
 export class CheckboxComponent {
+
+
+  basicCheckboxesHTML: string = checkboxData.basicCheckboxesHTML;
+  basicCheckboxesTS: string = checkboxData.basicCheckboxesTS;
+  ConfigurableCheckboxHTML: string = checkboxData.ConfigurableCheckboxHTML;
+  ConfigurableCheckboxTS: string = checkboxData.ConfigurableCheckboxTS;
+  CheckboxerReactiveFormsHTML: string = checkboxData.CheckboxerReactiveFormsHTML; 
+  CheckboxerReactiveFormsTS: string = checkboxData.CheckboxerReactiveFormsTS; 
+
+
   task: any = {
     name: 'Indeterminate',
     completed: false,

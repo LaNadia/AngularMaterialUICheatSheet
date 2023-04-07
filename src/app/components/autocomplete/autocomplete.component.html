@@ -1,16 +1,14 @@
-<mat-grid-list cols="5" rowHeight="130rem" role="list" >
+<mat-grid-list cols="7" rowHeight="90rem" role="list" >
 
     <mat-grid-tile colspan="1" ></mat-grid-tile>
 
-
-    <mat-grid-tile role="listitem" colspan="1" >
+    <mat-grid-tile role="listitem" colspan="2" >
         <mat-card>
             <mat-card-header>
                 <mat-card-title>Simple autocomplete</mat-card-title>
             </mat-card-header>
             <mat-divider></mat-divider>
             <mat-card-content>
-
                 <form class="example-form">
                     <mat-form-field class="example-full-width" appearance="fill">
                       <mat-label>Number</mat-label>
@@ -165,10 +163,313 @@
 
             </mat-card-content>
 
-            <mat-divider></mat-divider>
-
-
       </mat-card>
    </mat-grid-tile>
+
+   <mat-grid-tile role="listitem" colspan="3" >
+    <mat-card>
+
+      <mat-card-header>
+        <mat-card-title>Simple autocomplete</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+          <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    See source code + explanation
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="HTML">
+                      <ng-template matTabContent>
+                          <ngx-codemirror
+                            [(ngModel)]="SimpleAutocompleteHTML"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                          ></ngx-codemirror>
+                      </ng-template>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                      <ng-template matTabContent>
+                          <ngx-codemirror
+                            [(ngModel)]="SimpleAutocompleteTS"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                          ></ngx-codemirror>
+                      </ng-template>
+                    </mat-tab>
+                    <mat-tab label="Explanations template">
+                        <ng-template matTabContent>
+                          please write 
+                        </ng-template>
+                    </mat-tab>
+                  </mat-tab-group>
+              </mat-expansion-panel>
+          </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Plain input autocomplete</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content >
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="PlainInputAutocompleteHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="PlainInputAutocompleteTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Autocomplete overview</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="AutocompleteOverviewHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="AutocompleteOverviewTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Option groups autocomplete</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="OptionGroupsAutocompleteHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="OptionGroupsAutocompleteTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Filter autocomplete</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="FilterAutocompleteHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="FilterAutocompleteTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Display value autocomplete (picked values)</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DisplayValueAutocompleteHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DisplayValueAutocompleteTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+
+    </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile colspan="1" ></mat-grid-tile>
 
 </mat-grid-list>

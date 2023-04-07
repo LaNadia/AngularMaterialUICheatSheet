@@ -1,10 +1,9 @@
 
-<mat-grid-list cols="4" rowHeight="120rem" role="list" >
+<mat-grid-list cols="4" rowHeight="380rem" role="list" >
 
-    <mat-grid-tile colspan="1" ></mat-grid-tile>
-    <mat-grid-tile colspan="1" ></mat-grid-tile>
-
-    <mat-grid-tile role="listitem" colspan="1" >
+  <mat-grid-tile colspan="1" ></mat-grid-tile>
+ 
+  <mat-grid-tile role="listitem" colspan="1" >
         <mat-card>
 
             <mat-card-header>
@@ -361,23 +360,719 @@
                   <p>Selected range: {{range.value | json}}</p>
             </mat-card-content>
 
-            <mat-divider></mat-divider>
-
-
-
-
-
-
-
-
-
-
-
       </mat-card>
-   </mat-grid-tile>
-
-   <mat-grid-tile colspan="2" ></mat-grid-tile>
+  </mat-grid-tile>
 
 
+  <mat-grid-tile role="listitem" colspan="1">
+    <mat-card>
+
+      <mat-card-header>
+        <mat-card-title>Basic datepicker</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+
+          <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    See source code + explanation
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="HTML">
+                      <ng-template matTabContent>
+                          <ngx-codemirror
+                            [(ngModel)]="basicDatepicker"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                          ></ngx-codemirror>
+                      </ng-template>
+                    </mat-tab>
+                    <mat-tab label="Explanations template">
+                        <ng-template matTabContent>
+                          please write 
+                        </ng-template>
+                    </mat-tab>
+                  </mat-tab-group>
+              </mat-expansion-panel>
+          </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Basic date range picker</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="No form">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="BasicDateRangePicker"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker start date</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.7rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerStartDateHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerStartDateTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker + filter exclunding weekdays</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerExclundingWeekdaysHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerExclundingWeekdaysTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker with min & max period</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerMinMaxPeriodHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerMinMaxPeriodTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker action buttons</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerActionButtons"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker open method</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 14rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerOpenMethod"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker palette colors</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.7rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerPaletteColors"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker with custom icon</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerWithCustomIcon"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Disabled datepicker</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 26rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DisabledDatepicker"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker input and change events</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerInputChangeEventsHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerInputChangeEventsTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker inline calendar example</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 42rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerInlineCalendarExampleHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerInlineCalendarExampleTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker touch UI</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 11.8rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerTouchUI"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Datepicker selected value</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 21.3em;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerSelectedValueHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatepickerSelectedValueTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Date range picker comparison ranges</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 16.5rem;">
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatePickerComparisonRangesHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatePickerComparisonRangesTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+  
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Date range picker forms integration</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content >
+  
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatePickerFormsIntegrationHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="DatePickerFormsIntegrationTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+      </mat-card-content>
+
+  </mat-card>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile colspan="1" ></mat-grid-tile>
 
 </mat-grid-list>

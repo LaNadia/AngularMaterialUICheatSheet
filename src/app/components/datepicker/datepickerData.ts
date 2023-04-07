@@ -55,7 +55,7 @@ export const datepickerData: any = {
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>`,
+    </mat-form-field>`,
     DatepickerMinMaxPeriodTS:
     `minDate: Date;
     maxDate: Date;
@@ -101,7 +101,7 @@ export const datepickerData: any = {
     </mat-form-field>`,
 
 
-DatepickerWithCustomIcon:
+  DatepickerWithCustomIcon:
     `<mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Choose a date</mat-label>
     <input matInput [matDatepicker]="picker">
@@ -183,7 +183,7 @@ DatepickerWithCustomIcon:
   </mat-form-field>`,
 
 
-  DatepickerSelectedValueHTML:
+DatepickerSelectedValueHTML:
   `<mat-form-field appearance="fill">
   <mat-label>Angular forms</mat-label>
   <input matInput [matDatepicker]="picker1" [formControl]="date">
@@ -258,7 +258,7 @@ DatePickerComparisonRangesTS:
     });`,
 
 
-    DatePickerFormsIntegrationHTML:
+DatePickerFormsIntegrationHTML:
     `<mat-form-field appearance="fill">
     <mat-label>Enter a date range</mat-label>
     <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
@@ -275,22 +275,10 @@ DatePickerComparisonRangesTS:
   
   <p>Selected range: {{range.value | json}}</p>`,
 
-  DatePickerFormsIntegrationTS:
+DatePickerFormsIntegrationTS:
   `range = new FormGroup({
     start: new FormControl<Date | null>(null),
     end: new FormControl<Date | null>(null),
   });`,
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

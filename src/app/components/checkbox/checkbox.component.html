@@ -1,9 +1,9 @@
 
-<mat-grid-list cols="5" rowHeight="65rem" role="list" >
+<mat-grid-list cols="6" rowHeight="90rem" role="list" >
 
-    <mat-grid-tile colspan="1" ></mat-grid-tile>
+  <mat-grid-tile colspan="1" ></mat-grid-tile>
 
-    <mat-grid-tile role="listitem" colspan="1" >
+  <mat-grid-tile role="listitem" colspan="2" >
         <mat-card>
             <mat-card-header>
                 <mat-card-title>Basic checkboxes</mat-card-title>
@@ -48,7 +48,6 @@
             </mat-card-header>
             <mat-divider></mat-divider>
             <mat-card-content>
-
                 <mat-card>
                     <mat-card-content>
                       <h2 class="example-h2">Checkbox configuration</h2>
@@ -71,7 +70,6 @@
                       </section>
                     </mat-card-content>
                   </mat-card>
-                  
                   <mat-card class="result">
                     <mat-card-content>
                       <h2 class="example-h2">Result</h2>
@@ -90,7 +88,9 @@
                   </mat-card>
             </mat-card-content>
 
-            <mat-divider></mat-divider><mat-card-header>
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
                 <mat-card-title>Checkboxes with reactive forms</mat-card-title>
             </mat-card-header>
             <mat-divider></mat-divider>
@@ -101,20 +101,168 @@
                     <p><mat-checkbox formControlName="extracheese">Extra Cheese</mat-checkbox></p>
                     <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p>
                   </section>
-                  
                   <section class="example-section" [formGroup]="toppings">
                     <h4>You chose:</h4>
                     {{toppings.value | json}}
                   </section>
             </mat-card-content>
 
-         
-
-
-
-
       </mat-card>
-   </mat-grid-tile>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile role="listitem" colspan="2" class="card-content-code">
+    <mat-card>
+
+      <mat-card-header>
+      <mat-card-title>Basic checkboxes</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 10.5rem;">
+          <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    See source code + explanation
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="HTML">
+                      <ng-template matTabContent>
+                          <ngx-codemirror
+                            [(ngModel)]="basicCheckboxesHTML"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                          ></ngx-codemirror>
+                      </ng-template>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                      <ng-template matTabContent>
+                          <ngx-codemirror
+                            [(ngModel)]="basicCheckboxesTS"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                          ></ngx-codemirror>
+                      </ng-template>
+                    </mat-tab>
+                    <mat-tab label="Explanations template">
+                        <ng-template matTabContent>
+                          please write 
+                        </ng-template>
+                    </mat-tab>
+                  </mat-tab-group>
+              </mat-expansion-panel>
+          </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Configurable checkbox</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding-bottom: 32.5rem;">
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      See source code + explanation
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                      <mat-tab label="HTML">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="ConfigurableCheckboxHTML"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="ConfigurableCheckboxTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                      <mat-tab label="Explanations template">
+                          <ng-template matTabContent>
+                            please write 
+                          </ng-template>
+                      </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+  
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+          <mat-card-title>Checkboxes with reactive forms</mat-card-title>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-content >
+              <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        See source code + explanation
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                          <ng-template matTabContent>
+                              <ngx-codemirror
+                                [(ngModel)]="CheckboxerReactiveFormsHTML"
+                                [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"
+                              ></ngx-codemirror>
+                          </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                          <ng-template matTabContent>
+                              <ngx-codemirror
+                                [(ngModel)]="CheckboxerReactiveFormsTS"
+                                [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"
+                              ></ngx-codemirror>
+                          </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                              please write 
+                            </ng-template>
+                        </mat-tab>
+                      </mat-tab-group>
+                  </mat-expansion-panel>
+              </mat-accordion>
+          </mat-card-content>
+
+  </mat-card>
+  </mat-grid-tile>
+
+<mat-grid-tile colspan="1" ></mat-grid-tile>
 
 </mat-grid-list>
 
