@@ -18,6 +18,10 @@ import { DatepickerComponent } from '../components/datepicker/datepicker.compone
 import { FormfieldComponent } from '../components/formfield/formfield.component';
 import { PaginatorComponent } from '../components/paginator/paginator.component';
 import { RadiobuttonComponent } from '../components/radiobutton/radiobutton.component';
+import { GridListComponent } from '../components/grid-list/grid-list.component';
+import { MenuComponent } from '../components/menu/menu.component';
+import { SelectComponent } from '../components/select/select.component';
+import { ExpansionPanelComponent } from '../components/expansion-panel/expansion-panel.component';
 
 
 
@@ -39,6 +43,10 @@ const routes: Routes = [
     FormfieldComponent,
     PaginatorComponent,
     RadiobuttonComponent,
+    ExpansionPanelComponent,
+    GridListComponent,
+    MenuComponent,
+    SelectComponent,
   ],
   imports: [
     CommonModule,
@@ -62,6 +70,10 @@ const routes: Routes = [
     FormfieldComponent,
     PaginatorComponent,
     RadiobuttonComponent,
+    ExpansionPanelComponent,
+    GridListComponent,
+    MenuComponent,
+    SelectComponent,
   ]
 })
 export class MainModule { }
