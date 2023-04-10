@@ -1,0 +1,27 @@
+mat-grid-tile{
+    overflow: visible;
+  }
+  
+  mat-card {
+    height: stretch;
+    width: stretch;
+    padding-bottom: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  mat-card-header{
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 1rem;
+  };
+  
+  mat-grid-tile[colspan="2"] mat-card-content {
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem 1rem 3.5rem 1rem;
+  }
+
+  mat-grid-tile[colspan="3"] mat-card-content {
+    padding-top: 1rem;
+  }
