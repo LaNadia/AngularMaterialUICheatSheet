@@ -22,6 +22,7 @@ import { InputComponent } from '../components/input/input.component';
 import { ListComponent } from '../components/list/list.component';
 import { SliderComponent } from '../components/slider/slider.component';
 import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.component';
+import { TableComponent } from '../components/table/table.component';
 
 
 
@@ -109,6 +110,9 @@ export class MainComponent {
           break;
         case 'slidetoggle': 
           this.element = SlideToggleComponent;
+          break;
+        case 'table': 
+          this.element = TableComponent;
           break;
 
           

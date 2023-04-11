@@ -26,6 +26,7 @@ import { InputComponent } from '../components/input/input.component';
 import { ListComponent } from '../components/list/list.component';
 import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.component';
 import { SliderComponent } from '../components/slider/slider.component';
+import { TableComponent } from '../components/table/table.component';
 
 
 
@@ -55,6 +56,7 @@ const routes: Routes = [
     ListComponent,
     SlideToggleComponent,
     SliderComponent,
+    TableComponent,
   ],
   imports: [
     CommonModule,
@@ -86,6 +88,7 @@ const routes: Routes = [
     ListComponent,
     SlideToggleComponent,
     SliderComponent,
+    TableComponent,
   ]
 })
 export class MainModule { }
