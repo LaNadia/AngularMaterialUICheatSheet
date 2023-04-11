@@ -53,6 +53,30 @@
             <mat-list-item>
                 <button mat-button class="navButton" (click)="showElement('paginator')"><h3>Paginator</h3></button>
             </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('expansionpanel')"><h3>Expansion Panel</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('gridlist')"><h3>Grid list</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('menu')"><h3>Menu</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('select')"><h3>Select</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('input')"><h3>Input</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('list')"><h3>List</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('slider')"><h3>Slider</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('slidetoggle')"><h3>Slide Toggle</h3></button>
+            </mat-list-item>
 
             <!-- 
             <mat-list-item>
@@ -67,6 +91,7 @@
     <mat-sidenav-content >
       <div *ngIf="!element">Show this while nothing is chosen</div>
       <ng-container *ngComponentOutlet="(element)" ></ng-container>
+
 
     </mat-sidenav-content>
   

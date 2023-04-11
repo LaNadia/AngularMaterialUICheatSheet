@@ -14,6 +14,14 @@ import { DatepickerComponent } from '../components/datepicker/datepicker.compone
 import { RadiobuttonComponent } from '../components/radiobutton/radiobutton.component';
 import { FormfieldComponent } from '../components/formfield/formfield.component';
 import { PaginatorComponent } from '../components/paginator/paginator.component';
+import { ExpansionPanelComponent } from '../components/expansion-panel/expansion-panel.component';
+import { GridListComponent } from '../components/grid-list/grid-list.component';
+import { MenuComponent } from '../components/menu/menu.component';
+import { SelectComponent } from '../components/select/select.component';
+import { InputComponent } from '../components/input/input.component';
+import { ListComponent } from '../components/list/list.component';
+import { SliderComponent } from '../components/slider/slider.component';
+import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.component';
 
 
 
@@ -77,6 +85,30 @@ export class MainComponent {
           break;
         case 'paginator': 
           this.element = PaginatorComponent;
+          break;
+        case 'expansionpanel': 
+          this.element = ExpansionPanelComponent;
+          break;
+        case 'gridlist': 
+          this.element = GridListComponent;
+          break;
+        case 'menu': 
+          this.element = MenuComponent;
+          break;
+        case 'select': 
+          this.element = SelectComponent;
+          break;
+        case 'input': 
+          this.element = InputComponent;
+          break;
+        case 'list': 
+          this.element = ListComponent;
+          break;
+        case 'slider': 
+          this.element = SliderComponent;
+          break;
+        case 'slidetoggle': 
+          this.element = SlideToggleComponent;
           break;
 
           

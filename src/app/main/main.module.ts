@@ -22,6 +22,10 @@ import { GridListComponent } from '../components/grid-list/grid-list.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { SelectComponent } from '../components/select/select.component';
 import { ExpansionPanelComponent } from '../components/expansion-panel/expansion-panel.component';
+import { InputComponent } from '../components/input/input.component';
+import { ListComponent } from '../components/list/list.component';
+import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.component';
+import { SliderComponent } from '../components/slider/slider.component';
 
 
 
@@ -47,6 +51,10 @@ const routes: Routes = [
     GridListComponent,
     MenuComponent,
     SelectComponent,
+    InputComponent,
+    ListComponent,
+    SlideToggleComponent,
+    SliderComponent,
   ],
   imports: [
     CommonModule,
@@ -74,6 +82,10 @@ const routes: Routes = [
     GridListComponent,
     MenuComponent,
     SelectComponent,
+    InputComponent,
+    ListComponent,
+    SlideToggleComponent,
+    SliderComponent,
   ]
 })
 export class MainModule { }

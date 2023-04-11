@@ -12,7 +12,6 @@ import { ButtonsModule } from './components/buttons/buttons.module';
 import { ChipsModule } from './components/chips/chips.module';
 
 
-
 @NgModule({
     declarations: [
         AppComponent,
