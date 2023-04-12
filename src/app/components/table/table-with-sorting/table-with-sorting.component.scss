@@ -1,0 +1,25 @@
+mat-grid-tile{
+  overflow: visible;
+}
+
+mat-card {
+  height: stretch;
+  width: stretch;
+  padding-bottom: 5rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+mat-card-header{
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 1rem;
+};
+
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }

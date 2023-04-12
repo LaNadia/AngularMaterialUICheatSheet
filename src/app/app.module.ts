@@ -10,6 +10,7 @@ import { MainModule } from './main/main.module';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { ButtonsModule } from './components/buttons/buttons.module';
 import { ChipsModule } from './components/chips/chips.module';
+import { TableModule } from './components/table/table.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ChipsModule } from './components/chips/chips.module';
         CodemirrorModule,
         MainModule,
         ChipsModule,
-        ButtonsModule
+        ButtonsModule,
+        TableModule
     ]
 })
 export class AppModule { }
