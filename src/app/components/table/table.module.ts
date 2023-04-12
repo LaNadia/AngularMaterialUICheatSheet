@@ -16,6 +16,7 @@ import { TableWithSortingComponent } from './table-with-sorting/table-with-sorti
 import { TableWrapATableComponentDefinitionBehaviorReuseComponent, WrapperTable } from './table-wrap-a-table-component-definition-behavior-reuse/table-wrap-a-table-component-definition-behavior-reuse.component';
 import { TablesWithToggleAbleStickyHeadersFootersAndColumnsComponent } from './tables-with-toggle-able-sticky-headers-footers-and-columns/tables-with-toggle-able-sticky-headers-footers-and-columns.component';
 import { FlexTablesWithToggleAbleStickyHeadersFootersAndColumnsComponent } from './flex-tables-with-toggle-able-sticky-headers-footers-and-columns/flex-tables-with-toggle-able-sticky-headers-footers-and-columns.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FlexTablesWithToggleAbleStickyHeadersFootersAndColumnsComponent } from 
     CommonModule,
     MaterialExportModule,
     CodemirrorModule,
+    FormsModule
   ],
   exports: [
     TableComponent,
