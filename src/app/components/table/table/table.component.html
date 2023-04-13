@@ -1,4 +1,4 @@
-<mat-grid-list cols="22" rowHeight="1100rem" role="list">
+<mat-grid-list cols="22" rowHeight="1150rem" role="list">
 
   <mat-grid-tile colspan="1"></mat-grid-tile>
 
@@ -503,7 +503,7 @@
       <app-tables-with-toggle-able-sticky-headers-footers-and-columns></app-tables-with-toggle-able-sticky-headers-footers-and-columns>
 
       <mat-divider></mat-divider>
-      
+
       <app-flex-tables-with-toggle-able-sticky-headers-footers-and-columns></app-flex-tables-with-toggle-able-sticky-headers-footers-and-columns>
 
     </mat-card>
@@ -516,7 +516,7 @@
         <mat-card-title>Basic use</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 37rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -554,11 +554,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table dynamically changing the columns displayed</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 46.8rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -596,11 +598,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with filtering</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 42.7rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -638,11 +642,101 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Flex table where one column's cells has a greater height than others.</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 34.5rem">
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FlexTableWhereOneColumnsCellsHasGreaterHheightThanOthersHTML" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FlexTableWhereOneColumnsCellsHasGreaterHheightThanOthersTS" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Footer row table</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content style="padding-bottom: 27.2rem">
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FooterRowTableHTML" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FooterRowTableTS" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with multiple header and footer rows</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 34rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -680,12 +774,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
 
       <mat-card-header>
         <mat-card-title>Binding event handlers and properties to the table rows</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 46rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -723,11 +818,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with sticky columns</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 37rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -765,11 +862,14 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
+      <mat-divider></mat-divider>
       <mat-card-header>
         <mat-card-title>Table with a sticky footer</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 27.2rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -807,11 +907,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with sticky header</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 37rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -849,11 +951,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Use of 'mat-text-column' with various configurations of the interface.</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 37rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -891,12 +995,14 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Use of `mat-text-column` which can be used for simple columns that only need to display a text
           value for the header and cells.</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 37rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -934,11 +1040,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Adding and removing data when using an array-based datasource</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 32.2rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -985,11 +1093,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Adding and removing data when using an observable-based datasource</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 32.3rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1036,11 +1146,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with expandable rows</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 29.4rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1087,12 +1199,14 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with columns defined using ngFor instead of statically written in the
           template.</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 29rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1130,12 +1244,14 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
 
       <mat-card-header>
         <mat-card-title>Table retrieving data through HTTP</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 21.5rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1182,12 +1298,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
 
       <mat-card-header>
         <mat-card-title>Data table with sorting, pagination, and filtering.</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content  style="padding-bottom: 21rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1234,11 +1351,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with pagination </mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 16.3rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1276,11 +1395,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with re-orderable columns</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 29rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1318,13 +1439,13 @@
         </mat-accordion>
       </mat-card-content>
 
-
+  <mat-divider></mat-divider>
 
       <mat-card-header>
         <mat-card-title>Table with selection</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 29rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1362,11 +1483,13 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
       <mat-card-header>
         <mat-card-title>Table with sorting</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 29rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1413,13 +1536,15 @@
         </mat-accordion>
       </mat-card-content>
 
+      <mat-divider></mat-divider>
+
 
       <mat-card-header>
         <mat-card-title>Table example that shows how to wrap a table component for definition and behavior
           reuse</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 31.4rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1466,63 +1591,13 @@
         </mat-accordion>
       </mat-card-content>
 
-
-      <mat-card-header>
-        <mat-card-title>Flex-layout tables with toggle-able sticky headers, footers, and columns</mat-card-title>
-      </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
-
-        <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                See source code + explanation
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-              <mat-tab label="HTML">
-                <ng-template matTabContent>
-                  <ngx-codemirror [(ngModel)]="FlexLayoutTablesWithToggleableStickyHeadersFootersColumnsHTML" [options]="{
-                                                              lineNumbers: true,
-                                                              theme: 'material',
-                                                              mode: 'markdown'
-                                                              }"></ngx-codemirror>
-                </ng-template>
-              </mat-tab>
-              <mat-tab label="TS">
-                <ng-template matTabContent>
-                  <ngx-codemirror [(ngModel)]="FlexLayoutTablesWithToggleableStickyHeadersFootersColumnsTS" [options]="{
-                                                              lineNumbers: true,
-                                                              theme: 'material',
-                                                              mode: 'markdown'
-                                                              }"></ngx-codemirror>
-                </ng-template>
-              </mat-tab>
-              <mat-tab label="CSS">
-                <ng-template matTabContent>
-                  <ngx-codemirror [(ngModel)]="FlexLayoutTablesWithToggleableStickyHeadersFootersColumnsCSS" [options]="{
-                                                              lineNumbers: true,
-                                                              theme: 'material',
-                                                              mode: 'markdown'
-                                                              }"></ngx-codemirror>
-                </ng-template>
-              </mat-tab>
-              <mat-tab label="Explanations template">
-                <ng-template matTabContent>
-                  please write
-                </ng-template>
-              </mat-tab>
-            </mat-tab-group>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-card-content>
 
       <mat-card-header>
         <mat-card-title>Tables with toggle-able sticky headers, footers, and columns</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
+      <mat-card-content style="padding-bottom: 32.5rem">
 
         <mat-accordion>
           <mat-expansion-panel>
@@ -1557,6 +1632,59 @@
                                                                 theme: 'material',
                                                                 mode: 'markdown'
                                                                 }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Flex-layout tables with toggle-able sticky headers, footers, and columns</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content >
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FlexLayoutTablesWithToggleableStickyHeadersFootersColumnsHTML" [options]="{
+                                                              lineNumbers: true,
+                                                              theme: 'material',
+                                                              mode: 'markdown'
+                                                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FlexLayoutTablesWithToggleableStickyHeadersFootersColumnsTS" [options]="{
+                                                              lineNumbers: true,
+                                                              theme: 'material',
+                                                              mode: 'markdown'
+                                                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="CSS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="FlexLayoutTablesWithToggleableStickyHeadersFootersColumnsCSS" [options]="{
+                                                              lineNumbers: true,
+                                                              theme: 'material',
+                                                              mode: 'markdown'
+                                                              }"></ngx-codemirror>
                 </ng-template>
               </mat-tab>
               <mat-tab label="Explanations template">
