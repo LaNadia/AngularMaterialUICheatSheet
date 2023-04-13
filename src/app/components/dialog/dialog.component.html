@@ -1,0 +1,368 @@
+<mat-grid-list cols="10" rowHeight="110rem" role="list">
+
+  <mat-grid-tile colspan="1"></mat-grid-tile>
+
+  <mat-grid-tile role="listitem" colspan="4">
+    <mat-card>
+
+      <app-dialog-animations></app-dialog-animations>
+
+      <mat-divider></mat-divider>
+
+      <app-dialog-with-header-scrollable-content-actions></app-dialog-with-header-scrollable-content-actions>
+
+      <mat-divider></mat-divider>
+
+      <app-injecting-data-when-opening-dialog></app-injecting-data-when-opening-dialog>
+
+      <mat-divider></mat-divider>
+
+      <app-dialog-elements></app-dialog-elements>
+
+      <mat-divider></mat-divider>
+
+      <app-dialog-launched-from-menu></app-dialog-launched-from-menu>
+
+      <mat-divider></mat-divider>
+
+      <app-dialog-overview></app-dialog-overview>
+    </mat-card>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile role="listitem" colspan="4">
+    <mat-card>
+
+      <mat-card-header>
+        <mat-card-title>Dialog Animations</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content  style="padding-bottom: 4.25rem">
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogAnimationsHTML" [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogAnimationsTS" [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="CSS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogAnimationsCSS" [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Example">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogAnimationsExampleHTML" [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Dialog with header, scrollable content and actions</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogWithHeaderScrollableContentActionsHTML" [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogWithHeaderScrollableContentActionsTS" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Example">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogWithHeaderScrollableContentActionsExampleHTML" [options]="{
+                                  lineNumbers: true,
+                                  theme: 'material',
+                                  mode: 'markdown'
+                                  }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+
+      <mat-card-header>
+        <mat-card-title>Injecting data when opening a dialog</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="InjectingDataWhenOpeningDialogHTML" [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="InjectingDataWhenOpeningDialogTS" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Example">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="InjectingDataWhenOpeningDialogExampleHTML" [options]="{
+                                  lineNumbers: true,
+                                  theme: 'material',
+                                  mode: 'markdown'
+                                  }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Dialog elements</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogElementsHTML" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogElementsTS" [options]="{
+                                  lineNumbers: true,
+                                  theme: 'material',
+                                  mode: 'markdown'
+                                  }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Example">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogElementsExampleHTML" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Dialog launched from a menu</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogLaunchedFromMenuHTML" [options]="{
+                                  lineNumbers: true,
+                                  theme: 'material',
+                                  mode: 'markdown'
+                                  }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogLaunchedFromMenuTS" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Example">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogLaunchedFromMenuExampleHTML" [options]="{
+                                      lineNumbers: true,
+                                      theme: 'material',
+                                      mode: 'markdown'
+                                      }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-header>
+        <mat-card-title>Dialog Overview</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                See source code + explanation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+              <mat-tab label="HTML">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogOverviewHTML" [options]="{
+                                      lineNumbers: true,
+                                      theme: 'material',
+                                      mode: 'markdown'
+                                      }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="TS">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogOverviewTS" [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Example">
+                <ng-template matTabContent>
+                  <ngx-codemirror [(ngModel)]="DialogOverviewExampleHTML" [options]="{
+                                          lineNumbers: true,
+                                          theme: 'material',
+                                          mode: 'markdown'
+                                          }"></ngx-codemirror>
+                </ng-template>
+              </mat-tab>
+              <mat-tab label="Explanations template">
+                <ng-template matTabContent>
+                  please write
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+
+
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1"></mat-grid-tile>
+
+</mat-grid-list>

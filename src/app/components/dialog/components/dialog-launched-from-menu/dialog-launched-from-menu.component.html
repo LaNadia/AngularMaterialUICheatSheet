@@ -1,0 +1,10 @@
+<mat-card-header>
+    <mat-card-title>Dialog launched from a menu</mat-card-title>
+</mat-card-header>
+<mat-divider></mat-divider>
+<mat-card-content>
+    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="openDialog()">Launch dialog</button>
+</mat-menu>
+</mat-card-content>

@@ -74,7 +74,8 @@ const material = [
   MatSliderModule,
   DragDropModule,
   MatProgressBarModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+
 ]
 
 

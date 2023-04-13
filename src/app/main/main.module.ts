@@ -26,9 +26,11 @@ import { InputComponent } from '../components/input/input.component';
 import { ListComponent } from '../components/list/list.component';
 import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.component';
 import { SliderComponent } from '../components/slider/slider.component';
-import { TableComponent } from '../components/table/table/table.component';
 import { TableModule } from '../components/table/table.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TabsComponent } from '../components/tabs/tabs.component';
+import { DialogModule } from '../components/dialog/dialog.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -58,6 +60,7 @@ const routes: Routes = [
     ListComponent,
     SlideToggleComponent,
     SliderComponent,
+    TabsComponent,
   ],
   imports: [
     CommonModule,
@@ -69,7 +72,8 @@ const routes: Routes = [
     ChipsModule,
     ButtonsModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    DialogModule,
   ],
 
   exports: [ 
@@ -91,6 +95,7 @@ const routes: Routes = [
     ListComponent,
     SlideToggleComponent,
     SliderComponent,
+    TabsComponent,
   ]
 })
 export class MainModule { }

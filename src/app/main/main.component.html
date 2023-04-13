@@ -11,8 +11,8 @@
     <mat-sidenav #sidenav mode="side">
         <mat-list>
             <mat-expansion-panel class="mat-elevation-z0">
-                <mat-expansion-panel-header>
-                    Buttons
+                <mat-expansion-panel-header >
+                     <h3>Buttons</h3>
                 </mat-expansion-panel-header>
                 <mat-nav-list>
                     <button mat-button (click)="showElement('buttons')">Buttons</button>
@@ -94,7 +94,7 @@
     <mat-sidenav-content >
       <!-- <div *ngIf="!element">Show this while nothing is chosen</div>
       <ng-container *ngComponentOutlet="(element)" ></ng-container> -->
-<app-table></app-table>
+    <app-dialog></app-dialog>
 
     </mat-sidenav-content>
   

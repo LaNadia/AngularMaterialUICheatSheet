@@ -1,0 +1,21 @@
+button {
+    margin-right: 8px;
+  }
+
+    
+  mat-card-header{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  };
+  
+  mat-card-content {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 3rem 1rem 3rem 1rem;
+  }
+
+  .mat-mdc-card-content:last-child {
+    padding-bottom: 3rem
+  }
