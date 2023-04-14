@@ -25,6 +25,9 @@ import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.co
 import { TableComponent } from '../components/table/table/table.component';
 import { TabsComponent } from '../components/tabs/tabs.component';
 import { DialogComponent } from '../components/dialog/dialog.component';
+import { ToolbarComponent } from '../components/toolbar/toolbar.component';
+import { TooltipComponent } from '../components/tooltip/tooltip.component';
+import { TreeComponent } from '../components/tree/tree.component';
 
 
 
@@ -124,6 +127,15 @@ export class MainComponent {
           break;
         case 'dialog': 
           this.element = DialogComponent;
+          break;
+        case 'toolbar': 
+          this.element = ToolbarComponent;
+          break;
+        case 'tooltip': 
+          this.element = TooltipComponent;
+          break;
+        case 'tree': 
+          this.element = TreeComponent;
           break;
 
           

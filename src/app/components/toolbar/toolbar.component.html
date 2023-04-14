@@ -1,0 +1,242 @@
+<mat-grid-list cols="6" rowHeight="150rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2" >
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Basic toolbar</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-toolbar>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span>My App</span>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                      <mat-icon>favorite</mat-icon>
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                      <mat-icon>share</mat-icon>
+                    </button>
+                  </mat-toolbar>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Multi-row toolbar</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-toolbar color="primary">
+                    <mat-toolbar-row>
+                      <span>Custom Toolbar</span>
+                    </mat-toolbar-row>
+                  
+                    <mat-toolbar-row>
+                      <span>Second Line</span>
+                      <span class="example-spacer"></span>
+                      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+                    </mat-toolbar-row>
+                  
+                    <mat-toolbar-row>
+                      <span>Third Line</span>
+                      <span class="example-spacer"></span>
+                      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+                      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+                    </mat-toolbar-row>
+                  </mat-toolbar>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            
+            <mat-card-header>
+                <mat-card-title>Toolbar overview</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <p>
+                    <mat-toolbar>
+                      <span>My Application</span>
+                    </mat-toolbar>
+                  </p>
+                  
+                  <p>
+                    <mat-toolbar>
+                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span>My App</span>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                      <mat-icon>favorite</mat-icon>
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                     <mat-icon>share</mat-icon>
+                   </button>
+                  </mat-toolbar>
+                  </p>
+                  
+                  <p>
+                    <mat-toolbar color="primary">
+                      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <mat-icon>menu</mat-icon>
+                      </button>
+                      <span>My App</span>
+                      <span class="example-spacer"></span>
+                      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                        <mat-icon>favorite</mat-icon>
+                      </button>
+                      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                        <mat-icon>share</mat-icon>
+                      </button>
+                    </mat-toolbar>
+                  </p>
+                  
+                  <p>
+                    <mat-toolbar color="primary">
+                      <mat-toolbar-row>
+                        <span>My App</span>
+                        <span class="example-spacer"></span>
+                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                          <mat-icon>menu</mat-icon>
+                        </button>
+                      </mat-toolbar-row>
+                  
+                      <mat-toolbar-row>
+                        <span>Second Line</span>
+                        <span class="example-spacer"></span>
+                        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                          <mat-icon>favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                          <mat-icon>share</mat-icon>
+                        </button>
+                      </mat-toolbar-row>
+                    </mat-toolbar>
+                  </p>
+
+            </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+   <mat-grid-tile role="listitem" colspan="2">
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>Basic toolbar</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding-bottom: 4rem">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="BasicToolbarHTML" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+        
+        <mat-divider></mat-divider>
+        
+        <mat-card-header>
+            <mat-card-title>Multi-row toolbar</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding-bottom: 12rem">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="MultiRowToolbarHTML" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+        
+        <mat-divider></mat-divider>
+        
+        <mat-card-header>
+            <mat-card-title>Toolbar overview</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="ToolbarOverviewHTML" [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+  </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+</mat-grid-list>

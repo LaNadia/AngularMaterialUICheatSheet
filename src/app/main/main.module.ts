@@ -30,7 +30,9 @@ import { TableModule } from '../components/table/table.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TabsComponent } from '../components/tabs/tabs.component';
 import { DialogModule } from '../components/dialog/dialog.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToolbarComponent } from '../components/toolbar/toolbar.component';
+import { TreeComponent } from '../components/tree/tree.component';
+import { TooltipModule } from '../components/tooltip/tooltip.module';
 
 
 
@@ -61,6 +63,8 @@ const routes: Routes = [
     SlideToggleComponent,
     SliderComponent,
     TabsComponent,
+    ToolbarComponent,
+    TreeComponent
   ],
   imports: [
     CommonModule,
@@ -74,6 +78,7 @@ const routes: Routes = [
     TableModule,
     HttpClientModule,
     DialogModule,
+    TooltipModule
   ],
 
   exports: [ 
@@ -96,6 +101,8 @@ const routes: Routes = [
     SlideToggleComponent,
     SliderComponent,
     TabsComponent,
+    ToolbarComponent,
+    TreeComponent
   ]
 })
 export class MainModule { }

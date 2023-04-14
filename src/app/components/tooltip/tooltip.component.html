@@ -1,0 +1,668 @@
+<mat-grid-list cols="6" rowHeight="200rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Basic tooltip 1 </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <button mat-raised-button
+                matTooltip="Info about the action"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                    Action
+                </button>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Basic tooltip 2 </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <button mat-raised-button
+                class="demo-button"
+                matTooltip="Info about the action"
+                [matTooltipPositionAtOrigin]="enabled.value"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+                </button>
+                
+                <mat-checkbox [formControl]="enabled" class="example-enabled-checkbox">
+                Position at origin enabled
+                </mat-checkbox>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Tooltip with a custom position </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-form-field class="example-user-input" appearance="fill">
+                    <mat-label>Tooltip position</mat-label>
+                    <mat-select [formControl]="position">
+                      <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+                        {{positionOption}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  
+                  <button mat-raised-button
+                          matTooltip="Info about the action"
+                          [matTooltipPosition]="position.value!"
+                          aria-label="Button that displays a tooltip in various positions">
+                    Action
+                  </button>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Tooltip with a changing message</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field class="example-user-input" appearance="fill">
+                    <mat-label>Tooltip message</mat-label>
+                    <input matInput [formControl]="message">
+                  </mat-form-field>
+                  
+                  <button mat-raised-button
+                          [matTooltip]="message.value || ''"
+                          aria-label="Button that displays a tooltip with a custom message">
+                    Action
+                  </button>
+               
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Tooltip that can be manually shown/hidden</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <div>
+                    <span> Click the following buttons to... </span>
+                    <button mat-button
+                            (click)="tooltip.show()"
+                            aria-label="Show tooltip on the button at the end of this section"
+                            class="example-action-button">
+                      show
+                    </button>
+                    <button mat-button
+                            (click)="tooltip.hide()"
+                            aria-label="Hide tooltip on the button at the end of this section"
+                            class="example-action-button">
+                      hide
+                    </button>
+                    <button mat-button
+                            (click)="tooltip.toggle()"
+                            aria-label="Show/Hide tooltip on the button at the end of this section"
+                            class="example-action-button">
+                      toggle show/hide
+                    </button>
+                  </div>
+                  
+                  <button mat-raised-button #tooltip="matTooltip"
+                          matTooltip="Info about the action"
+                          matTooltipPosition="right"
+                          aria-tooltip="Button that displays and hides a tooltip triggered by other buttons">
+                    Action
+                  </button>
+               
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Tooltip that can be disabled</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <button mat-raised-button
+                matTooltip="Info about the action"
+                [matTooltipDisabled]="disabled.value"
+                aria-label="Button that displays a tooltip that can be programmatically disabled">
+                Action
+                </button>
+                
+                <mat-checkbox [formControl]="disabled" class="example-disabled-checkbox">
+                Tooltip disabled
+                </mat-checkbox>
+                    
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Tooltip with a show and hide delay</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+             
+                <mat-form-field class="example-user-input" appearance="fill">
+                    <mat-label>Show delay</mat-label>
+                    <input matInput type="number" [formControl]="showDelay"
+                           aria-label="Adds a delay between hovering over the button and displaying the tooltip">
+                    <mat-hint>milliseconds</mat-hint>
+                  </mat-form-field>
+                  
+                  <mat-form-field class="example-user-input" appearance="fill">
+                    <mat-label>Hide delay</mat-label>
+                    <input matInput type="number" [formControl]="hideDelay"
+                           aria-label="Adds a delay between hovering away from the button and hiding the tooltip">
+                    <mat-hint>milliseconds</mat-hint>
+                  </mat-form-field>
+                  
+                  <button mat-raised-button matTooltip="Info about the action"
+                          [matTooltipShowDelay]="showDelay.value"
+                          [matTooltipHideDelay]="hideDelay.value"
+                          aria-label="Button that displays a tooltip with a customized delay in showing and hiding">
+                    Action
+                  </button>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            
+            <mat-card-header>
+                <mat-card-title>Tooltip that demonstrates auto-hiding when it clips out of its scrolling container</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+             
+                <mat-form-field appearance="fill">
+                    <mat-label>Tooltip position</mat-label>
+                    <mat-select [formControl]="position2">
+                      <mat-option *ngFor="let positionOption of positionOptions2" [value]="positionOption">
+                        {{positionOption}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  
+                  <div class="example-container" cdkScrollable>
+                    <button mat-raised-button #tooltip="matTooltip"
+                            matTooltip="Info about the action"
+                            [matTooltipPosition]="position2.value!"
+                            matTooltipHideDelay="100000"
+                            aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+                            class="example-button">
+                      Action
+                    </button>
+                  </div>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <app-tooltip-with-show-hide-delay2></app-tooltip-with-show-hide-delay2>
+
+            <mat-divider></mat-divider>
+
+            <app-tooltip-can-have-custom-class></app-tooltip-can-have-custom-class>
+
+
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2">
+        <mat-card>
+
+          <mat-card-header>
+          <mat-card-title>Basic tooltip 1 </mat-card-title>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-content style="padding: 1rem 1rem 2.25rem 1rem;">
+
+              <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        See source code + explanation
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                          <ng-template matTabContent>
+                              <ngx-codemirror
+                                [(ngModel)]="BasicTooltip1HTML"
+                                [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"
+                              ></ngx-codemirror>
+                          </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                              please write 
+                            </ng-template>
+                        </mat-tab>
+                      </mat-tab-group>
+                  </mat-expansion-panel>
+              </mat-accordion>
+          </mat-card-content>
+
+          <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Basic tooltip 2 </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 22.25rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="BasicTooltip2HTML" [options]="{
+                                          lineNumbers: true,
+                                          theme: 'material',
+                                          mode: 'markdown'
+                                          }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="BasicTooltip2TS" [options]="{
+                                          lineNumbers: true,
+                                          theme: 'material',
+                                          mode: 'markdown'
+                                          }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="CSS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="BasicTooltip2CSS" [options]="{
+                                          lineNumbers: true,
+                                          theme: 'material',
+                                          mode: 'markdown'
+                                          }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+        
+        <mat-card-header>
+            <mat-card-title>Tooltip with a custom position </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 8.15rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipWithCustomPositionHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipWithCustomPositionTS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Tooltip with a changing message</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 8.1rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipWithChangingMessageHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipWithChangingMessageTS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Tooltip that can be manually shown/hidden</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 7.8rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipManuallyShownHiddenHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Tooltip that can be disabled</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 5.7rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipDisabledHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipDisabledTS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Tooltip with a show and hide delay 1</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 14rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipShowHideDelayHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipShowHideDelayTS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Tooltip that demonstrates auto-hiding when it clips out of its scrolling container</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 9.2rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipAutoHidingClipsOutScrollingContainerHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipAutoHidingClipsOutScrollingContainerTS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header>
+            <mat-card-title>Tooltip with a show and hide delay 2</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 1rem 1rem 1.2rem 1rem;">
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipWithShowHideDelay2HTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipWithShowHideDelay2TS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-header style="padding: 1rem 1rem 0 1rem;">
+            <mat-card-title>Tooltip that can have a custom class applied</mat-card-title>
+        </mat-card-header >
+        <mat-divider></mat-divider>
+        <mat-card-content>
+        
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            See source code + explanation
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="HTML">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipCanHaveCustomClassHTML" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="TS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipCanHaveCustomClassTS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="CSS">
+                            <ng-template matTabContent>
+                                <ngx-codemirror [(ngModel)]="TooltipCanHaveCustomClassCSS" [options]="{
+                                              lineNumbers: true,
+                                              theme: 'material',
+                                              mode: 'markdown'
+                                              }"></ngx-codemirror>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Explanations template">
+                            <ng-template matTabContent>
+                                please write
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+</mat-grid-list>

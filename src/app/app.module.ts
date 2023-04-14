@@ -12,6 +12,7 @@ import { ButtonsModule } from './components/buttons/buttons.module';
 import { ChipsModule } from './components/chips/chips.module';
 import { TableModule } from './components/table/table.module';
 import { DialogModule } from './components/dialog/dialog.module';
+import { TooltipModule } from './components/tooltip/tooltip.module';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { DialogModule } from './components/dialog/dialog.module';
         ButtonsModule,
         TableModule,
         DialogModule,
+        TooltipModule
         
     ]
 })
