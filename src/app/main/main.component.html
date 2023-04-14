@@ -80,6 +80,15 @@
             <mat-list-item>
                 <button mat-button class="navButton" (click)="showElement('table')"><h3>Table</h3></button>
             </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('tabs')"><h3>Tabs</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('radiobutton')"><h3>Radiobuttons</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('dialog')"><h3>Dialog</h3></button>
+            </mat-list-item>
 
             <!-- 
             <mat-list-item>
@@ -92,9 +101,8 @@
     </mat-sidenav>
   
     <mat-sidenav-content >
-      <!-- <div *ngIf="!element">Show this while nothing is chosen</div>
-      <ng-container *ngComponentOutlet="(element)" ></ng-container> -->
-    <app-dialog></app-dialog>
+      <div *ngIf="!element">Show this while nothing is chosen</div>
+      <ng-container *ngComponentOutlet="(element)" ></ng-container>
 
     </mat-sidenav-content>
   

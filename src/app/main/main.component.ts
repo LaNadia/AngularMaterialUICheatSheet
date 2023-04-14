@@ -23,6 +23,8 @@ import { ListComponent } from '../components/list/list.component';
 import { SliderComponent } from '../components/slider/slider.component';
 import { SlideToggleComponent } from '../components/slide-toggle/slide-toggle.component';
 import { TableComponent } from '../components/table/table/table.component';
+import { TabsComponent } from '../components/tabs/tabs.component';
+import { DialogComponent } from '../components/dialog/dialog.component';
 
 
 
@@ -113,6 +115,15 @@ export class MainComponent {
           break;
         case 'table': 
           this.element = TableComponent;
+          break;
+        case 'tabs': 
+          this.element = TabsComponent;
+          break;
+        case 'radiobutton': 
+          this.element = RadiobuttonComponent;
+          break;
+        case 'dialog': 
+          this.element = DialogComponent;
           break;
 
           
