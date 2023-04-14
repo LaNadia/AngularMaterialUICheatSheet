@@ -33,6 +33,7 @@ import { DialogModule } from '../components/dialog/dialog.module';
 import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 import { TreeComponent } from '../components/tree/tree.component';
 import { TooltipModule } from '../components/tooltip/tooltip.module';
+import { TreeModule } from '../components/tree/tree.module';
 
 
 
@@ -64,7 +65,6 @@ const routes: Routes = [
     SliderComponent,
     TabsComponent,
     ToolbarComponent,
-    TreeComponent
   ],
   imports: [
     CommonModule,
@@ -78,7 +78,8 @@ const routes: Routes = [
     TableModule,
     HttpClientModule,
     DialogModule,
-    TooltipModule
+    TooltipModule,
+    TreeModule
   ],
 
   exports: [ 
@@ -101,8 +102,7 @@ const routes: Routes = [
     SlideToggleComponent,
     SliderComponent,
     TabsComponent,
-    ToolbarComponent,
-    TreeComponent
+    ToolbarComponent
   ]
 })
 export class MainModule { }
