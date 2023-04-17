@@ -28,6 +28,10 @@ import { DialogComponent } from '../components/dialog/dialog.component';
 import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 import { TooltipComponent } from '../components/tooltip/tooltip.component';
 import { TreeComponent } from '../components/tree/tree.component';
+import { SidenavComponent } from '../components/sidenav/sidenav.component';
+import { StepperComponent } from '../components/stepper/stepper.component';
+import { SortHeaderComponent } from '../components/sort-header/sort-header.component';
+import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 
 
 
@@ -137,6 +141,19 @@ export class MainComponent {
         case 'tree': 
           this.element = TreeComponent;
           break;
+        case 'sidenav': 
+          this.element = SidenavComponent;
+          break;
+        case 'stepper': 
+          this.element = StepperComponent;
+          break;
+        case 'sortheader': 
+          this.element = SortHeaderComponent;
+          break;
+        case 'snackbar': 
+          this.element = SnackbarComponent;
+          break;
+
 
           
           

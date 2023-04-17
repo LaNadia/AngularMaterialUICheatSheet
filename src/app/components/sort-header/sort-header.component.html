@@ -1,0 +1,91 @@
+<mat-grid-list cols="6" rowHeight="60rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="2" >
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Sorting overview</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <table matSort (matSortChange)="sortData($event)">
+                    <tr>
+                      <th mat-sort-header="name">Dessert (100g)</th>
+                      <th mat-sort-header="calories">Calories</th>
+                      <th mat-sort-header="fat">Fat (g)</th>
+                      <th mat-sort-header="carbs">Carbs (g)</th>
+                      <th mat-sort-header="protein">Protein (g)</th>
+                    </tr>
+                  
+                    <tr *ngFor="let dessert of sortedData">
+                      <td>{{dessert.name}}</td>
+                      <td>{{dessert.calories}}</td>
+                      <td>{{dessert.fat}}</td>
+                      <td>{{dessert.carbs}}</td>
+                      <td>{{dessert.protein}}</td>
+                    </tr>
+                  </table>
+
+            </mat-card-content>
+      </mat-card>
+   </mat-grid-tile>
+
+   <mat-grid-tile role="listitem" colspan="2">
+    <mat-card>
+
+      <mat-card-header>
+      <mat-card-title>Sorting overview</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+
+          <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    See source code + explanation
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="HTML">
+                      <ng-template matTabContent>
+                          <ngx-codemirror
+                            [(ngModel)]="SortingOverviewHTML"
+                            [options]="{
+                            lineNumbers: true,
+                            theme: 'material',
+                            mode: 'markdown'
+                            }"
+                          ></ngx-codemirror>
+                      </ng-template>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <ng-template matTabContent>
+                            <ngx-codemirror
+                              [(ngModel)]="SortingOverviewTS"
+                              [options]="{
+                              lineNumbers: true,
+                              theme: 'material',
+                              mode: 'markdown'
+                              }"
+                            ></ngx-codemirror>
+                        </ng-template>
+                      </mat-tab>
+                    <mat-tab label="Explanations template">
+                        <ng-template matTabContent>
+                          please write 
+                        </ng-template>
+                    </mat-tab>
+                  </mat-tab-group>
+              </mat-expansion-panel>
+          </mat-accordion>
+      </mat-card-content>
+
+    </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+</mat-grid-list>

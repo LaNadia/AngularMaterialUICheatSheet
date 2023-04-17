@@ -1,0 +1,50 @@
+mat-grid-tile{
+    overflow: visible;
+  }
+  
+  mat-card {
+    height: stretch;
+    width: stretch;
+    padding-bottom: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  mat-card-header{
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 1rem;
+  };
+  
+  mat-grid-tile[colspan="2"] mat-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+  
+  }
+
+  .example-container {
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }

@@ -1,0 +1,955 @@
+<mat-grid-list cols="18" rowHeight="320rem" role="list" >
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="8">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Stepper responsive</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <ng-container [ngSwitch]="stepperOrientation | async">
+                    <div *ngSwitchCase="'horizontal'">Make your screen smaller to see a vertical stepper</div>
+                    <div *ngSwitchCase="'vertical'">Make your screen larger to see a horizontal stepper</div>
+                  </ng-container>
+                  
+                  <mat-stepper
+                    class="example-stepper"
+                    [orientation]="(stepperOrientation | async)!">
+                    <mat-step [stepControl]="firstFormGroup1" label="Fill out your name">
+                      <form [formGroup]="firstFormGroup1">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup1" label="Fill out your address">
+                      <form [formGroup]="secondFormGroup1">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="thirdFormGroup1" label="Fill out your phone number">
+                      <form [formGroup]="thirdFormGroup1">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Phone number</mat-label>
+                          <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper vertical</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+                    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+                  </button>
+                  <mat-stepper orientation="vertical" [linear]="isLinear" #stepper1>
+                    <mat-step [stepControl]="firstFormGroup2">
+                      <form [formGroup]="firstFormGroup2">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup2">
+                      <form [formGroup]="secondFormGroup2">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper1.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper with optional steps (address)</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <button mat-raised-button (click)="isOptional = !isOptional">
+                    {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+                  </button>
+                  
+                  <mat-stepper linear #stepper2>
+                    <mat-step [stepControl]="firstFormGroup3">
+                      <form [formGroup]="firstFormGroup3">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup3" [optional]="isOptional">
+                      <form [formGroup]="secondFormGroup3">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper2.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper lazy content rendering</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-stepper orientation="vertical">
+                    <mat-step>
+                      <ng-template matStepLabel>Step 1</ng-template>
+                      <ng-template matStepContent>
+                        <p>This content was rendered lazily</p>
+                        <button mat-button matStepperNext>Next</button>
+                      </ng-template>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Step 2</ng-template>
+                      <ng-template matStepContent>
+                        <p>This content was also rendered lazily</p>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                      </ng-template>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Step 3</ng-template>
+                      <p>This content was rendered eagerly</p>
+                      <button mat-button matStepperPrevious>Back</button>
+                    </mat-step>
+                  </mat-stepper>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper label bottom position</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-stepper labelPosition="bottom" #stepper>
+                    <mat-step [stepControl]="firstFormGroup4">
+                      <form [formGroup]="firstFormGroup4">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup4" optional>
+                      <form [formGroup]="secondFormGroup4">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                </mat-stepper>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper header position</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-stepper headerPosition="bottom" #stepper>
+                    <mat-step [stepControl]="firstFormGroup5">
+                      <form [formGroup]="firstFormGroup5">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup5" optional>
+                      <form [formGroup]="secondFormGroup5">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field>
+                          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      You are now done.
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </mat-card-content>
+            
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper that displays errors in the steps</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-stepper #stepper4>
+                    <mat-step [stepControl]="firstFormGroup6" errorMessage="Name is required.">
+                      <form [formGroup]="firstFormGroup6">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <p>Go to a different step to see the error state</p>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup6" errorMessage="Address is required.">
+                      <form [formGroup]="secondFormGroup6">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <p>Go to a different step to see the error state</p>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper4.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </mat-card-content>
+            
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper with editable steps</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <button mat-raised-button (click)="isEditable = !isEditable">
+                    {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+                  </button>
+                  
+                  <mat-stepper linear #stepper5>
+                    <mat-step [stepControl]="firstFormGroup7" [editable]="isEditable">
+                      <form [formGroup]="firstFormGroup7">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup7" [editable]="isEditable">
+                      <form [formGroup]="secondFormGroup7">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper5.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </mat-card-content>
+            
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper animations</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <div class="example-input-wrapper">
+                    <label for="duration">Animation duration:</label>
+                    <input id="duration" value="2000" type="number" min="0" step="100" #duration>
+                  </div>
+                  
+                  <mat-vertical-stepper [linear]="false" #stepper6 [animationDuration]="duration.value">
+                    <mat-step [stepControl]="firstFormGroup8">
+                      <form [formGroup]="firstFormGroup8">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup8">
+                      <form [formGroup]="secondFormGroup8">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field>
+                          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      You are now done.
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper6.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-vertical-stepper>
+
+            </mat-card-content>
+            
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper with customized states</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-stepper #stepper7>
+                    <mat-step [stepControl]="firstFormGroup9">
+                      <form [formGroup]="firstFormGroup9">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup9">
+                      <form [formGroup]="secondFormGroup9">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper7.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+                  
+                  <mat-stepper>
+                    <mat-step label="Step 1" state="phone">
+                      <p>Put down your phones.</p>
+                      <div>
+                        <button mat-button matStepperNext>Next</button>
+                      </div>
+                    </mat-step>
+                    <mat-step label="Step 2" state="chat">
+                      <p>Socialize with each other.</p>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                      </div>
+                    </mat-step>
+                    <mat-step label="Step 3">
+                      <p>You're welcome.</p>
+                    </mat-step>
+                  
+                    <!-- Icon overrides. -->
+                    <ng-template matStepperIcon="phone">
+                      <mat-icon>call_end</mat-icon>
+                    </ng-template>
+                    <ng-template matStepperIcon="chat">
+                      <mat-icon>forum</mat-icon>
+                    </ng-template>
+                  </mat-stepper>
+
+            </mat-card-content>
+            
+
+      </mat-card>
+   </mat-grid-tile>
+
+    <mat-grid-tile role="listitem" colspan="8">
+        <mat-card>
+
+            <mat-card-header>
+                <mat-card-title>Stepper responsive</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 14.87rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperResponsiveHTML" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperResponsiveTS" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="CSS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperResponsiveCSS" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper vertical</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 24.4rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperVerticalHTML" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperVerticalTS" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper with optional steps</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 15.4rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperOptionalStepsHTML" [options]="{
+                                lineNumbers: true,
+                                theme: 'material',
+                                mode: 'markdown'
+                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperOptionalStepsTS" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper lazy content rendering</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 17.2rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperLazyContentRenderingHTML" [options]="{
+                                    lineNumbers: true,
+                                    theme: 'material',
+                                    mode: 'markdown'
+                                    }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper label bottom position</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 15.7rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperLabelBottomPositionHTML" [options]="{
+                                        lineNumbers: true,
+                                        theme: 'material',
+                                        mode: 'markdown'
+                                        }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperLabelBottomPositionTS" [options]="{
+                                            lineNumbers: true,
+                                            theme: 'material',
+                                            mode: 'markdown'
+                                            }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper header position</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 12.1rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperHeaderPositionHTML" [options]="{
+                                            lineNumbers: true,
+                                            theme: 'material',
+                                            mode: 'markdown'
+                                            }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperHeaderPositionTS" [options]="{
+                                                lineNumbers: true,
+                                                theme: 'material',
+                                                mode: 'markdown'
+                                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper that displays errors in the steps</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 14.1rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperDisplaysErrorsHTML" [options]="{
+                                                lineNumbers: true,
+                                                theme: 'material',
+                                                mode: 'markdown'
+                                                }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperDisplaysErrorsTS" [options]="{
+                                                    lineNumbers: true,
+                                                    theme: 'material',
+                                                    mode: 'markdown'
+                                                    }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-header>
+                <mat-card-title>Stepper with editable steps</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 15.4rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperEditableStepsHTML" [options]="{
+                                                    lineNumbers: true,
+                                                    theme: 'material',
+                                                    mode: 'markdown'
+                                                    }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperEditableStepsTS" [options]="{
+                                                        lineNumbers: true,
+                                                        theme: 'material',
+                                                        mode: 'markdown'
+                                                        }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Stepper animations</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content style="padding-bottom: 23.4rem">
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperAnimationsHTML" [options]="{
+                                                        lineNumbers: true,
+                                                        theme: 'material',
+                                                        mode: 'markdown'
+                                                        }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperAnimationsTS" [options]="{
+                                                            lineNumbers: true,
+                                                            theme: 'material',
+                                                            mode: 'markdown'
+                                                            }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+
+            <mat-card-header>
+                <mat-card-title>Stepper with customized states</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                See source code + explanation
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                            <mat-tab label="HTML">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperCustomizedStatesHTML" [options]="{
+                                                        lineNumbers: true,
+                                                        theme: 'material',
+                                                        mode: 'markdown'
+                                                        }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="TS">
+                                <ng-template matTabContent>
+                                    <ngx-codemirror [(ngModel)]="StepperCustomizedStatesTS" [options]="{
+                                                            lineNumbers: true,
+                                                            theme: 'material',
+                                                            mode: 'markdown'
+                                                            }"></ngx-codemirror>
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="Explanations template">
+                                <ng-template matTabContent>
+                                    please write
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+
+
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+
+</mat-grid-list>

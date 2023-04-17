@@ -98,6 +98,18 @@
             <mat-list-item>
                 <button mat-button class="navButton" (click)="showElement('tree')"><h3>Tree</h3></button>
             </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('sidenav')"><h3>Sidenav</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('stepper')"><h3>Stepper</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('sortheader')"><h3>Sort header</h3></button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button class="navButton" (click)="showElement('snackbar')"><h3>Snackbar</h3></button>
+            </mat-list-item>
 
             <!-- 
             <mat-list-item>
@@ -114,6 +126,7 @@
       <ng-container *ngComponentOutlet="(element)" ></ng-container>
 
 
+ <!-- <app-stepper></app-stepper> -->
 
     </mat-sidenav-content>
   

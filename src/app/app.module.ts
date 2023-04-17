@@ -15,7 +15,6 @@ import { DialogModule } from './components/dialog/dialog.module';
 import { TooltipModule } from './components/tooltip/tooltip.module';
 import { TreeModule } from './components/tree/tree.module';
 
-
 @NgModule({
     declarations: [
         AppComponent,
