@@ -14,11 +14,13 @@ import { TableModule } from './components/table/table.module';
 import { DialogModule } from './components/dialog/dialog.module';
 import { TooltipModule } from './components/tooltip/tooltip.module';
 import { TreeModule } from './components/tree/tree.module';
+import { SnackbarModule } from './components/snackbar/snackbar.module';
+
 
 @NgModule({
     declarations: [
         AppComponent,
-        MainComponent,
+        MainComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -34,8 +36,8 @@ import { TreeModule } from './components/tree/tree.module';
         TableModule,
         DialogModule,
         TooltipModule,
-        TreeModule
-        
+        TreeModule,
+        SnackbarModule
     ]
 })
 export class AppModule { }

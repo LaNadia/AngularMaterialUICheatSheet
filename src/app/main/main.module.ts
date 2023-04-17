@@ -31,13 +31,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { TabsComponent } from '../components/tabs/tabs.component';
 import { DialogModule } from '../components/dialog/dialog.module';
 import { ToolbarComponent } from '../components/toolbar/toolbar.component';
-import { TreeComponent } from '../components/tree/tree.component';
 import { TooltipModule } from '../components/tooltip/tooltip.module';
 import { TreeModule } from '../components/tree/tree.module';
-import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 import { SidenavComponent } from '../components/sidenav/sidenav.component';
 import { StepperComponent } from '../components/stepper/stepper.component';
 import { SortHeaderComponent } from '../components/sort-header/sort-header.component';
+import { SnackbarModule } from '../components/snackbar/snackbar.module';
+import { StubComponent } from '../stub/stub.component';
 
 
 
@@ -69,10 +69,10 @@ const routes: Routes = [
     SliderComponent,
     TabsComponent,
     ToolbarComponent,
-    SnackbarComponent,
     SidenavComponent,
     StepperComponent,
     SortHeaderComponent,
+    StubComponent
   ],
   imports: [
     CommonModule,
@@ -87,7 +87,8 @@ const routes: Routes = [
     HttpClientModule,
     DialogModule,
     TooltipModule,
-    TreeModule
+    TreeModule,
+    SnackbarModule
   ],
 
   exports: [ 
@@ -111,10 +112,10 @@ const routes: Routes = [
     SliderComponent,
     TabsComponent,
     ToolbarComponent,
-    SnackbarComponent,
     SidenavComponent,
     StepperComponent,
     SortHeaderComponent,
+    StubComponent
   ]
 })
 export class MainModule { }

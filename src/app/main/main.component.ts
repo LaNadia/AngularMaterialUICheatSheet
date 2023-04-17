@@ -31,7 +31,8 @@ import { TreeComponent } from '../components/tree/tree.component';
 import { SidenavComponent } from '../components/sidenav/sidenav.component';
 import { StepperComponent } from '../components/stepper/stepper.component';
 import { SortHeaderComponent } from '../components/sort-header/sort-header.component';
-import { SnackbarComponent } from '../components/snackbar/snackbar.component';
+import { SnackbarComponent } from '../components/snackbar/snackbar/snackbar.component';
+import { StubComponent } from '../stub/stub.component';
 
 
 
@@ -43,14 +44,7 @@ import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 export class MainComponent {
 
   element: any | null;
-  @ViewChild('sidenav', {static: true}) sidenav!: MatSidenav;
-
-  toggleSidenav(event: MouseEvent){
-
-    this.sidenav.toggle();
-    console.log(event.currentTarget)
-
-  };
+  stub: StubComponent = StubComponent;
 
   showElement(element: string){
       switch(element) {
